@@ -16,3 +16,15 @@ os.environ["OPENAI_API_VERSION"] = OPENAI_API_VERSION
 # MODEL_NAME="gpt-4o-mini"
 MODEL_NAME="gpt-4o"
 # MODEL_NAME="gpt-3.5-turbo"
+
+# =============================================================================
+# vLLM Configuration Toggle
+# =============================================================================
+try:
+    from core.vllm_config import USE_VLLM, VLLM_MODEL_NAME
+    if USE_VLLM:
+        MODEL_NAME = VLLM_MODEL_NAME  # Override with vLLM model
+        print(f"[CONFIG] Using vLLM with model: {MODEL_NAME}")
+except ImportError:
+    USE_VLLM = False
+    print("[CONFIG] vLLM not configured, using Azure OpenAI API")

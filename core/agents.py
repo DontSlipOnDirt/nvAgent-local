@@ -3,16 +3,31 @@ from func_timeout import FunctionTimedOut
 
 LLM_API_FUC = None
 
+# Check if vLLM should be used
 try:
-    from core import api
+    from core.vllm_config import USE_VLLM
+except ImportError:
+    USE_VLLM = False
 
-    LLM_API_FUC = api.safe_call_llm
-    print(f"Use func from core.api in agents.py")
-except:
-    from core import llm
+if USE_VLLM:
+    try:
+        from core import vllm_client
+        LLM_API_FUC = vllm_client.safe_call_llm
+        print(f"[AGENTS] Using vLLM client")
+    except ImportError as e:
+        print(f"[AGENTS] vLLM import failed: {e}")
+        print(f"[AGENTS] Falling back to Azure OpenAI API")
+        USE_VLLM = False
 
-    LLM_API_FUC = llm.safe_call_llm
-    print(f"Use func from core.llm in agents.py")
+if not USE_VLLM:
+    try:
+        from core import api
+        LLM_API_FUC = api.safe_call_llm
+        print(f"[AGENTS] Using core.api (Azure OpenAI)")
+    except ImportError:
+        from core import llm
+        LLM_API_FUC = llm.safe_call_llm
+        print(f"[AGENTS] Using core.llm (Azure OpenAI)")
 
 from core.const import *
 from typing import List

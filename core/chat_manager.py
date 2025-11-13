@@ -6,18 +6,37 @@ from viseval.dataset import Dataset
 import matplotlib.pyplot as plt
 import traceback
 
-INIT_LOG__PATH_FUNC = None
+INIT_LOG_PATH_FUNC = None
 LLM_API_FUC = None
+
+# Check if vLLM should be used
 try:
-    from core import api
-    LLM_API_FUC = api.safe_call_llm
-    INIT_LOG__PATH_FUNC = api.init_log_path
-    print(f"Use func from core.api in chat_manager.py")
-except:
-    from core import llm
-    LLM_API_FUC = llm.safe_call_llm
-    INIT_LOG__PATH_FUNC = llm.init_log_path
-    print(f"Use func from core.llm in chat_manager.py")
+    from core.vllm_config import USE_VLLM
+except ImportError:
+    USE_VLLM = False
+
+if USE_VLLM:
+    try:
+        from core import vllm_client
+        LLM_API_FUC = vllm_client.safe_call_llm
+        INIT_LOG_PATH_FUNC = vllm_client.init_log_path
+        print(f"[CHAT_MANAGER] Using vLLM client")
+    except ImportError as e:
+        print(f"[CHAT_MANAGER] vLLM import failed: {e}")
+        print(f"[CHAT_MANAGER] Falling back to Azure OpenAI API")
+        USE_VLLM = False
+
+if not USE_VLLM:
+    try:
+        from core import api
+        LLM_API_FUC = api.safe_call_llm
+        INIT_LOG_PATH_FUNC = api.init_log_path
+        print(f"[CHAT_MANAGER] Using core.api (Azure OpenAI)")
+    except ImportError:
+        from core import llm
+        LLM_API_FUC = llm.safe_call_llm
+        INIT_LOG_PATH_FUNC = llm.init_log_path
+        print(f"[CHAT_MANAGER] Using core.llm (Azure OpenAI)")
 
 import time
 from pprint import pprint
@@ -46,7 +65,7 @@ class ChatManager(object):
             Composer(),
             Validator(data_path=self.data_path)
         ]
-        INIT_LOG__PATH_FUNC(log_path)
+        INIT_LOG_PATH_FUNC(log_path)
 
     def ping_network(self):
         # check network status
