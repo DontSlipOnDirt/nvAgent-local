@@ -4,8 +4,10 @@ import os
 from core.chat_manager import ChatManager
 from viseval import Dataset, Evaluator
 from langchain_openai import ChatOpenAI
+from dotenv import load_dotenv
 
 def _main():
+    load_dotenv()  # Load environment variables from .env file if present
 
     # config vision model
     vision_model = ChatOpenAI(

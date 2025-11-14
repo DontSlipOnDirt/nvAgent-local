@@ -13,10 +13,10 @@ VLLM_BASE_URL = f"http://{VLLM_HOST}:{VLLM_PORT}/v1"
 
 # Model Configuration
 # Choose one of these models:
-VLLM_MODEL_NAME = "HuggingFaceTB/SmolLM2-135M-Instruct"
+# VLLM_MODEL_NAME = "HuggingFaceTB/SmolLM2-135M-Instruct"
 # VLLM_MODEL_NAME = "meta-llama/Meta-Llama-3-8B-Instruct"
 # VLLM_MODEL_NAME = "mistralai/Mistral-7B-Instruct-v0.3"
-# VLLM_MODEL_NAME = "Qwen/Qwen2.5-7B-Instruct"
+VLLM_MODEL_NAME = "Qwen/Qwen2.5-7B-Instruct"
 
 # Inference Parameters
 VLLM_MAX_MODEL_LEN = 8192  # Maximum context length

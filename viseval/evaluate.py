@@ -7,7 +7,13 @@ import logging
 import os
 from typing import Union
 
-import cairosvg
+try:
+    import cairosvg
+    CAIROSVG_AVAILABLE = True
+except ImportError:
+    CAIROSVG_AVAILABLE = False
+    print("Warning: cairosvg not available. Vision model features requiring SVG to PNG conversion will be disabled.")
+
 import pandas as pd
 from attr import dataclass
 
@@ -163,6 +169,11 @@ class EvaluationResult:
 
 
 def convert_svg_to_base64(svg_string):
+    if not CAIROSVG_AVAILABLE:
+        raise ImportError(
+            "cairosvg is not installed. Please install it with: pip install cairosvg cairocffi\n"
+            "Or disable vision model features by setting vision_model=None"
+        )
     png_string = cairosvg.svg2png(bytestring=svg_string)
     base64_encoded = base64.b64encode(png_string).decode("utf-8")
     return f"data:image/png;base64,{base64_encoded}"

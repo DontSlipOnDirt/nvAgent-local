@@ -1,3 +1,17 @@
+.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
 
 # files from uv
 .python-version
@@ -6,3 +20,12 @@ uv.lock
 
 # data
 /visEval_dataset
+
+# Logs
+*.log
+test_logs.txt
+evaluate_logs/
+
+# Temporary files
+*.svg
+temp_*.svg

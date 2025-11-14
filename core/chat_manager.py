@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from core.agents import Processor, Composer, Validator
-from core.const import MAX_ROUND, SYSTEM_NAME, PROVIDER_NAME
+from core.const import MAX_ROUND, SYSTEM_NAME, PROCESSOR_NAME
 from core.utils import show_svg
 from viseval.dataset import Dataset
 import matplotlib.pyplot as plt
@@ -85,7 +85,7 @@ class ChatManager(object):
     def start(self, user_message: dict):
         start_time = time.time()
         if user_message['send_to'] == SYSTEM_NAME:  # in the first round, pass message to prune
-            user_message['send_to'] = PROVIDER_NAME
+            user_message['send_to'] = PROCESSOR_NAME
         for _ in range(MAX_ROUND):  # start chat in group
             self._chat_single_round(user_message)
             if user_message['send_to'] == SYSTEM_NAME:  # should terminate chat
