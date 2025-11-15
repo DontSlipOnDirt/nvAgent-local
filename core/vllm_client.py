@@ -11,6 +11,7 @@ from core.vllm_config import (
     VLLM_BASE_URL,
     VLLM_MODEL_NAME,
     VLLM_MAX_TOKENS,
+    VLLM_MAX_MODEL_LEN,
     VLLM_TEMPERATURE
 )
 import os
@@ -60,18 +61,36 @@ def api_func(prompt: str) -> Tuple[str, int, int]:
     """
     client = get_vllm_client()
     
-    response = client.chat.completions.create(
-        model=VLLM_MODEL_NAME,
-        messages=[{"role": "user", "content": prompt}],
-        temperature=VLLM_TEMPERATURE,
-        max_tokens=VLLM_MAX_TOKENS
-    )
+    try:
+        response = client.chat.completions.create(
+            model=VLLM_MODEL_NAME,
+            messages=[{"role": "user", "content": prompt}],
+            temperature=VLLM_TEMPERATURE,
+            max_tokens=VLLM_MAX_TOKENS
+        )
+        
+        text = response.choices[0].message.content.strip()
+        prompt_tokens = response.usage.prompt_tokens
+        completion_tokens = response.usage.completion_tokens
+        
+        # Check if response was truncated
+        finish_reason = response.choices[0].finish_reason
+        if finish_reason == "length":
+            print(f"\n⚠️  WARNING: Response truncated due to max_tokens limit!")
+            print(f"   Prompt tokens: {prompt_tokens}, Completion tokens: {completion_tokens}")
+            print(f"   Consider increasing VLLM_MAX_TOKENS (currently {VLLM_MAX_TOKENS})")
+            print(f"   Or check if prompt is too long.\n")
+        
+        return text, prompt_tokens, completion_tokens
     
-    text = response.choices[0].message.content.strip()
-    prompt_tokens = response.usage.prompt_tokens
-    completion_tokens = response.usage.completion_tokens
-    
-    return text, prompt_tokens, completion_tokens
+    except Exception as e:
+        # Check for context length errors
+        error_msg = str(e)
+        if "maximum context length" in error_msg.lower() or "too many tokens" in error_msg.lower():
+            print(f"\n❌ ERROR: Input too long for model context window!")
+            print(f"   VLLM_MAX_MODEL_LEN: {VLLM_MAX_MODEL_LEN}")
+            print(f"   Error: {error_msg}\n")
+        raise
 
 
 def safe_call_llm(input_prompt: str, **kwargs) -> str:
