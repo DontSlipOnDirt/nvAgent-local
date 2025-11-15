@@ -136,7 +136,11 @@ class Processor(BaseAgent):
                 if tmp_v == '':
                     continue
                 else:
-                    vals.append(v)
+                    # Convert numpy types to native Python types for cleaner output
+                    if hasattr(v, 'item'):  # numpy scalar
+                        vals.append(v.item())
+                    else:
+                        vals.append(v)
         if not vals:
             return ''
 
