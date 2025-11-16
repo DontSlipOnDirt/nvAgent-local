@@ -7,9 +7,24 @@ from langchain_openai import ChatOpenAI
 from dotenv import load_dotenv
 
 def _main():
-    # load_dotenv()  # Load environment variables from .env file if present
-
     # config vision model
+    # Option 1: Use local vision vLLM
+    try:
+        from core.vision_vllm_config import USE_VISION_VLLM
+        from core.vision_vllm_client import get_vision_model
+        
+        if USE_VISION_VLLM:
+            print("Using local vision vLLM model...")
+            vision_model = get_vision_model()
+        else:
+            print("USE_VISION_VLLM=False, vision model disabled")
+            vision_model = None
+    except ImportError:
+        print("Vision vLLM not configured, vision model disabled")
+        vision_model = None
+    
+    # Option 2: Use GPT-4o-mini API
+    # load_dotenv()  # Load environment variables from .env file
     # vision_model = ChatOpenAI(
     #     api_key=os.getenv("OPENAI_API_KEY"),
     #     base_url=os.getenv("OPENAI_API_BASE"),
@@ -22,7 +37,7 @@ def _main():
 
     folder = "visEval_dataset"
     library = 'matplotlib'
-    # webdriver = Path("C:\Program Files\Google\Chrome\Application\chromedriver.exe") # set your chromedriver path here
+    # webdriver = Path("C:\Program Files\Google\Chrome\Application\chromedriver.exe") # set your chromedriver path here for layout check
     log_folder = Path("evaluate_logs")
 
     # config dataset
@@ -31,8 +46,7 @@ def _main():
     agent = ChatManager(data_path=folder, log_path=str("agent_logs.txt"))
 
     # config evaluator
-    evaluator = Evaluator(webdriver_path=None, vision_model=None)
-    # evaluator = Evaluator()
+    evaluator = Evaluator(webdriver_path=None, vision_model=vision_model)
     # evaluate agent
     config = {"library": library, "logs": log_folder}
     result = evaluator.evaluate(agent, dataset, config)

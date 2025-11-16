@@ -87,14 +87,10 @@ python -m core.vllm_server
 # You'll see: "Uvicorn running on http://0.0.0.0:8000"
 ```
 
-**Step 2: Test Connection**
+**Step 2: Verify Setup**
 ```bash
-# Terminal 2 - Test that server is working (activate venv first!)
-python test_vllm.py
-
-# If successful, you'll see:
-# ✓ vLLM server connection successful
-# ✓ Model response received
+# Terminal 2 - Run tests (activate venv first!)
+python test_suite.py --all
 ```
 
 **Step 3: Run Your Application**
@@ -106,16 +102,12 @@ python run_evaluate.py
 python web_vis/app.py
 ```
 
-### Alternative: Quick Test
-```bash
-# Test integration end-to-end
-python test_nl2vis_vllm.py
-```
+
 
 ### Using uv run (alternative)
-If you don't want to activate the venv, you can use `uv run` instead:
+If you don't want to activate the venv manually, you can use `uv run` instead:
 ```bash
-uv run test_vllm.py
+uv run test_suite.py --all
 uv run run_evaluate.py
 ```
 
@@ -134,10 +126,12 @@ uv run run_evaluate.py
 - **`core/chat_manager.py`** - Orchestrates agent communication
 
 ### Test/Utility Files
-- **`test_vllm.py`** - Test vLLM server connection
-- **`test_nl2vis_vllm.py`** - Test full NL2Vis integration
-- **`quick_check.py`** - Comprehensive setup verification
-- **`monitor_vllm.py`** - Monitor server metrics (requires requests, torch)
+- **`test_suite.py`** - Test suite for vLLM setup verification
+  - `--all` - Run all tests (imports, config, GPU, server, integration)
+  - `--setup` - Check configuration and environment only
+  - `--server` - Test vLLM server connectivity and responses
+  - `--integration` - Test NL2Vis agent integration
+  - `--monitor` - Continuous server health monitoring
 
 ### Application Entry Points
 - **`run_evaluate.py`** - Run NL2Vis evaluation pipeline
@@ -159,7 +153,7 @@ vim core/vllm_config.py  # Set USE_VLLM = True
 python -m core.vllm_server
 
 # 4. Run tests/development (Terminal 2, activate venv there too)
-python test_vllm.py
+python test_suite.py --all
 python run_evaluate.py
 ```
 
@@ -248,13 +242,16 @@ huggingface-cli whoami
 python -c "from transformers import AutoTokenizer; AutoTokenizer.from_pretrained('meta-llama/Meta-Llama-3-8B-Instruct')"
 ```
 
-### Server starts but test_vllm.py fails
+### Server starts but tests fail
 ```bash
 # Wait longer for model to load (can take 2-3 minutes)
 # Check server logs for errors
 
 # Test manually with curl
 curl http://localhost:8000/v1/models
+
+# Or run diagnostic tests
+python test_suite.py --server
 ```
 
 ---
@@ -262,6 +259,11 @@ curl http://localhost:8000/v1/models
 ## 🔍 Quick Verification
 
 ```bash
+# Quick automated check
+python test_suite.py --all
+
+# Or manual checks:
+
 # 1. Check Python environment
 python --version  # Should be 3.8+
 
@@ -273,9 +275,6 @@ nvidia-smi  # Should show GPU and CUDA version
 
 # 4. Check configuration
 python -c "from core.vllm_config import USE_VLLM, VLLM_MODEL_NAME; print(f'USE_VLLM={USE_VLLM}, Model={VLLM_MODEL_NAME}')"
-
-# 5. Run comprehensive check
-python quick_check.py
 ```
 
 ---
@@ -312,5 +311,5 @@ python quick_check.py
 uv venv && source .venv/bin/activate
 uv pip install -r requirements.txt
 python -m core.vllm_server              # Terminal 1
-python test_vllm.py && python run_evaluate.py  # Terminal 2
+python test_suite.py --all && python run_evaluate.py  # Terminal 2
 ```
