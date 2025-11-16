@@ -25,6 +25,7 @@ uv.lock
 *.log
 test_logs.txt
 evaluate_logs/
+api_trace.json
 
 # Temporary files
 *.svg
