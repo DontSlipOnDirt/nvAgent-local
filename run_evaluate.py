@@ -1,4 +1,5 @@
 import json
+import shutil
 from datetime import datetime
 from pathlib import Path
 from typing import Tuple, Optional
@@ -150,6 +151,10 @@ def save_results(result, text_model_name: str, vision_model_name: Optional[str],
     }
     with open(scores_json_path, "w") as f:
         json.dump(final_output, f, indent=2)
+
+    shutil.move("api_trace.json", run_folder / "api_trace.json")
+    shutil.move("agent_logs.txt", run_folder / "agent_logs.txt")
+    shutil.move("evaluate_logs/evaluation.log", run_folder / "evaluation.log")
     
     return detailed_csv_path, scores_json_path, score
 
@@ -189,7 +194,7 @@ def main():
     """Main evaluation pipeline."""
     # Configuration
     folder = "visEval_dataset"
-    table_type = "all"
+    table_type = "single" # single, multiple, or all
     library = 'matplotlib'
     log_folder = Path("evaluate_logs")
     
