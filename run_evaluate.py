@@ -85,13 +85,15 @@ def save_results(result, text_model_name: str, vision_model_name: Optional[str],
     text_model_short = text_model_name.split('/')[-1] if '/' in text_model_name else text_model_name
     vision_model_short = vision_model_name.split('/')[-1] if vision_model_name and '/' in vision_model_name else (vision_model_name or 'NoVision')
     
+    # get dataset size
+    dataset_size = len(json.load(open('visEval_dataset/visEval.json'))) if table_type == 'all' else len(json.load(open('visEval_dataset/visEval_' + table_type + '.json')))
+
     # Load full dataset to classify instances as single/multi-table
     with open('visEval_dataset/visEval.json') as f:
         full_dataset = json.load(f)
     
     # Load detailed results
     detailed_df = result.detail_records()
-    dataset_size = len(detailed_df)
     
     # Add classification for single vs multi-table
     def is_multi_table(instance_id):
@@ -105,9 +107,9 @@ def save_results(result, text_model_name: str, vision_model_name: Optional[str],
     # Calculate single and multi-table scores
     def calc_scores(df_subset):
         if len(df_subset) == 0:
-            return {"count": 0, "invalid_rate": 0, "illegal_rate": 0, "pass_rate": 0}
+            return {"query_count": 0, "invalid_rate": 0, "illegal_rate": 0, "pass_rate": 0}
         return {
-            "count": len(df_subset),
+            "query_count": len(df_subset),
             "invalid_rate": df_subset['invalid_rate'].mean(),
             "illegal_rate": df_subset['illegal rate'].mean(),
             "pass_rate": df_subset['pass_rate'].mean(),
@@ -194,7 +196,7 @@ def main():
     """Main evaluation pipeline."""
     # Configuration
     folder = "visEval_dataset"
-    table_type = "single" # single, multiple, or all
+    table_type = "all" # single, multiple, or all
     library = 'matplotlib'
     log_folder = Path("evaluate_logs")
     
@@ -213,8 +215,7 @@ def main():
     
     # Save and display results
     detailed_csv_path, scores_json_path, score = save_results(
-        # result, text_model_name, vision_model_name, library, len(dataset.benchmark)
-        result, text_model_name, vision_model_name, library, table_type, 
+        result, text_model_name, vision_model_name, library, table_type
     )
     print_results(text_model_name, vision_model_name, score, 
                   detailed_csv_path, scores_json_path, log_folder)
