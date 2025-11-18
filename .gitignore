@@ -23,7 +23,7 @@ uv.lock
 
 # Logs
 *.log
-test_logs.txt
+agent_logs.txt
 evaluate_logs/
 api_trace.json
 

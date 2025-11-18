@@ -5,7 +5,7 @@ Separate from text model to allow different configurations.
 """
 
 # Toggle for using local vision model
-USE_VISION_VLLM = True  # Set to False to use GPT-4o-mini API
+USE_VISION_VLLM = False  # Set to when server is running
 
 # Vision vLLM Server Configuration
 VISION_VLLM_HOST = "localhost"

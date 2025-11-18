@@ -986,7 +986,7 @@ print("y_data:", df['{y_col}'].tolist())
         try:
             match = re.search(r'Visualize\s+([\w\s]+)\s+SELECT\s+(.*?)\s+FROM', vql, re.IGNORECASE | re.DOTALL)
             if not match:
-                return False
+                return
 
             vis_type = match.group(1).upper().strip()
             select_columns = [col.strip() for col in match.group(2).split(',')]
@@ -1085,6 +1085,13 @@ print("y_data:", df['{y_col}'].tolist())
         # message['pred'] = code
         # message['send_to'] = SYSTEM_NAME
         # return
+
+        # Handle translation failure - set pred to None/fallback and terminate
+        if code is None:
+            message['try_times'] = message.get('try_times', 0) + 1
+            message['pred'] = "import matplotlib.pyplot as plt"
+            message['send_to'] = SYSTEM_NAME
+            return
 
         # print(code)
         # do not fix vql containing "error" string

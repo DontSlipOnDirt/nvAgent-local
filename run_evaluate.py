@@ -63,7 +63,7 @@ def run_evaluation(agent, dataset, evaluator, config: dict):
 
 
 def save_results(result, text_model_name: str, vision_model_name: Optional[str], 
-                 library: str, dataset_size: int):
+                 library: str, table_type: str):
     """
     Save evaluation results to CSV and JSON files.
     
@@ -72,7 +72,7 @@ def save_results(result, text_model_name: str, vision_model_name: Optional[str],
         text_model_name: Name of text model used
         vision_model_name: Name of vision model used (or None)
         library: Visualization library used
-        dataset_size: Number of instances in dataset
+        table_type: single, multiple, or both
         
     Returns:
         Tuple of (detailed_csv_path, scores_json_path)
@@ -84,14 +84,18 @@ def save_results(result, text_model_name: str, vision_model_name: Optional[str],
     text_model_short = text_model_name.split('/')[-1] if '/' in text_model_name else text_model_name
     vision_model_short = vision_model_name.split('/')[-1] if vision_model_name and '/' in vision_model_name else (vision_model_name or 'NoVision')
     
+    # Extract dataset size
+    dataset_size = len(json.load(open('visEval_dataset/visEval.json'))) if table_type == 'all' else len(json.load(open('visEval_dataset/visEval_' + table_type + '.json')))
+
     # Create results directory
     results_dir = Path("results")
-    results_dir.mkdir(exist_ok=True)
+    run_folder_name = f"{timestamp}_{text_model_short}_{vision_model_short}"
+    run_folder = results_dir / run_folder_name
+    run_folder.mkdir(parents=True, exist_ok=True)
     
     # Create unique filenames
-    results_prefix = f"{timestamp}_{text_model_short}_{vision_model_short}"
-    detailed_csv_path = results_dir / f"{results_prefix}_detailed.csv"
-    scores_json_path = results_dir / f"{results_prefix}_scores.json"
+    detailed_csv_path = run_folder / "detailed_results.csv"
+    scores_json_path = run_folder / "scores.json"
     
     # Prepare metadata
     run_metadata = {
@@ -99,6 +103,7 @@ def save_results(result, text_model_name: str, vision_model_name: Optional[str],
         "vision_model": vision_model_name,
         "timestamp": datetime.now().isoformat(),
         "library": library,
+        "table_type": table_type,
         "dataset_size": dataset_size
     }
     
@@ -155,6 +160,7 @@ def main():
     """Main evaluation pipeline."""
     # Configuration
     folder = "visEval_dataset"
+    table_type = "all"
     library = 'matplotlib'
     log_folder = Path("evaluate_logs")
     
@@ -164,7 +170,7 @@ def main():
     
     # Initialize components
     dataset = Dataset(Path(folder))
-    agent = ChatManager(data_path=folder, log_path="agent_logs.txt")
+    agent = ChatManager(data_path=folder, log_path="./agent_logs.txt")
     evaluator = Evaluator(webdriver_path=None, vision_model=vision_model)
     
     # Run evaluation
@@ -173,7 +179,8 @@ def main():
     
     # Save and display results
     detailed_csv_path, scores_json_path, score = save_results(
-        result, text_model_name, vision_model_name, library, len(dataset.benchmark)
+        # result, text_model_name, vision_model_name, library, len(dataset.benchmark)
+        result, text_model_name, vision_model_name, library, table_type, 
     )
     print_results(text_model_name, vision_model_name, score, 
                   detailed_csv_path, scores_json_path, log_folder)
