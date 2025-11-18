@@ -72,7 +72,7 @@ def save_results(result, text_model_name: str, vision_model_name: Optional[str],
         text_model_name: Name of text model used
         vision_model_name: Name of vision model used (or None)
         library: Visualization library used
-        table_type: single, multiple, or both
+        table_type: single, multiple, or all
         
     Returns:
         Tuple of (detailed_csv_path, scores_json_path)
@@ -84,8 +84,36 @@ def save_results(result, text_model_name: str, vision_model_name: Optional[str],
     text_model_short = text_model_name.split('/')[-1] if '/' in text_model_name else text_model_name
     vision_model_short = vision_model_name.split('/')[-1] if vision_model_name and '/' in vision_model_name else (vision_model_name or 'NoVision')
     
-    # Extract dataset size
-    dataset_size = len(json.load(open('visEval_dataset/visEval.json'))) if table_type == 'all' else len(json.load(open('visEval_dataset/visEval_' + table_type + '.json')))
+    # Load full dataset to classify instances as single/multi-table
+    with open('visEval_dataset/visEval.json') as f:
+        full_dataset = json.load(f)
+    
+    # Load detailed results
+    detailed_df = result.detail_records()
+    dataset_size = len(detailed_df)
+    
+    # Add classification for single vs multi-table
+    def is_multi_table(instance_id):
+        if instance_id in full_dataset:
+            vql = full_dataset[instance_id].get("vis_query", {}).get("VQL", "")
+            return "JOIN" in vql.upper()
+        return False
+    
+    detailed_df['is_multi_table'] = detailed_df['id'].apply(is_multi_table)
+    
+    # Calculate single and multi-table scores
+    def calc_scores(df_subset):
+        if len(df_subset) == 0:
+            return {"count": 0, "invalid_rate": 0, "illegal_rate": 0, "pass_rate": 0}
+        return {
+            "count": len(df_subset),
+            "invalid_rate": df_subset['invalid_rate'].mean(),
+            "illegal_rate": df_subset['illegal rate'].mean(),
+            "pass_rate": df_subset['pass_rate'].mean(),
+        }
+    
+    single_scores = calc_scores(detailed_df[~detailed_df['is_multi_table']])
+    multi_scores = calc_scores(detailed_df[detailed_df['is_multi_table']])
 
     # Create results directory
     results_dir = Path("results")
@@ -108,16 +136,17 @@ def save_results(result, text_model_name: str, vision_model_name: Optional[str],
     }
     
     # Save detailed results with model info
-    detailed_df = result.detail_records()
     detailed_df['text_model'] = text_model_name
     detailed_df['vision_model'] = vision_model_name if vision_model_name else 'None'
     detailed_df.to_csv(detailed_csv_path, index=False)
     
-    # Save scores with metadata
+    # Save scores with metadata and single/multi breakdown
     score = result.score()
     final_output = {
         "metadata": run_metadata,
-        "scores": score
+        "scores": score,
+        "single_table_scores": single_scores,
+        "multi_table_scores": multi_scores
     }
     with open(scores_json_path, "w") as f:
         json.dump(final_output, f, indent=2)
