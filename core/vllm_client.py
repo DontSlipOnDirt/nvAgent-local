@@ -22,6 +22,7 @@ log_path = None
 api_trace_json_path = None
 total_prompt_tokens = 0
 total_response_tokens = 0
+call_idx = 0
 
 # Singleton client
 _vllm_client: Optional[OpenAI] = None
@@ -44,10 +45,12 @@ def init_log_path(my_log_path: str):
     global total_response_tokens
     global log_path
     global api_trace_json_path
+    global call_idx
     
     log_path = my_log_path
     total_prompt_tokens = 0
     total_response_tokens = 0
+    call_idx = 0
     dir_name = os.path.dirname(log_path)
     os.makedirs(dir_name, exist_ok=True)
     
@@ -103,6 +106,7 @@ def safe_call_llm(input_prompt: str, **kwargs) -> str:
     global total_prompt_tokens
     global total_response_tokens
     global world_dict
+    global call_idx
     
     MAX_RETRIES = 5
     
@@ -140,6 +144,10 @@ def safe_call_llm(input_prompt: str, **kwargs) -> str:
                         world_dict = {}
                         for k, v in kwargs.items():
                             world_dict[k] = v
+                    
+                    # Increment and add call index
+                    call_idx += 1
+                    world_dict['idx'] = call_idx
                     
                     # Add response data
                     world_dict['response'] = '\n' + sys_response.strip() + '\n'
