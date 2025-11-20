@@ -42,7 +42,7 @@ def main():
     import itertools
     dataset.benchmark = itertools.islice(dataset.benchmark, num_samples)
     
-    agent = ChatManager(data_path=folder, log_path=f"agent_logs_test_{num_samples}.txt")
+    agent = ChatManager(data_path=folder, log_path=f"./agent_logs_test_{num_samples}.txt")
     evaluator = Evaluator(webdriver_path=None, vision_model=vision_model)
     
     # Run evaluation

@@ -1,3 +1,9 @@
+"""
+Run evaluation on visEval_dataset
+Usage: uv run run_evaluate.py
+Note:
+"""
+
 import json
 import shutil
 from datetime import datetime
@@ -85,8 +91,15 @@ def save_results(result, text_model_name: str, vision_model_name: Optional[str],
     text_model_short = text_model_name.split('/')[-1] if '/' in text_model_name else text_model_name
     vision_model_short = vision_model_name.split('/')[-1] if vision_model_name and '/' in vision_model_name else (vision_model_name or 'NoVision')
     
-    # get dataset size
-    dataset_size = len(json.load(open('visEval_dataset/visEval.json'))) if table_type == 'all' else len(json.load(open('visEval_dataset/visEval_' + table_type + '.json')))
+    # Get dataset size from evaluation.log (count completed evaluations)
+    eval_log_path = Path("evaluate_logs") / "evaluation.log"
+    if eval_log_path.exists():
+        with open(eval_log_path, 'r') as f:
+            log_content = f.read()
+            dataset_size = log_content.count("evaluation finished")
+    else:
+        # Fallback to counting from dataset JSON if no log exists
+        dataset_size = len(json.load(open('visEval_dataset/visEval.json'))) if table_type == 'all' else len(json.load(open('visEval_dataset/visEval_' + table_type + '.json')))
 
     # Load full dataset to classify instances as single/multi-table
     with open('visEval_dataset/visEval.json') as f:

@@ -1,4 +1,4 @@
-MAX_ROUND = 3  # max try times of one agent talk
+MAX_ROUND = 5  # max try times of one agent talk
 
 COMPOSER_NAME = 'Composer'
 VALIDATOR_NAME = 'Validator'
