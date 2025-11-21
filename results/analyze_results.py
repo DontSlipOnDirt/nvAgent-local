@@ -1,11 +1,17 @@
 #!/usr/bin/env python3
-"""Analyze test results to understand illegal rate drivers"""
+"""
+Analyze test results to understand illegal rate drivers
+Usage: python results/analyze_results.py <result_directory>
+Example: python results/analyze_results.py results/20251118_032946_Qwen2.5-7B-Instruct_NoVision
+"""
 
+import sys
 import pandas as pd
 import json
 from pathlib import Path
 
-result_dir = Path("results/20251121_005953_Qwen2.5-7B-Instruct_NoVision")
+# take result directory as command line argument
+result_dir = Path(sys.argv[1])
 
 # Read CSV
 df = pd.read_csv(result_dir / "detailed_results.csv")

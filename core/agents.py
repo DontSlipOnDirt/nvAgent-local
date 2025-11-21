@@ -210,8 +210,9 @@ class Processor(BaseAgent):
                     1] == '':
                     column_desc = 'this is a number type column'
 
-                full_col_name = column_name.replace('_', ' ').lower()
-                col2dec_lst.append([full_col_name, column_desc])
+                # Keep original column name (preserving case) instead of lowercase processed version
+                # This ensures LLM generates queries with correct case-sensitive column names
+                col2dec_lst.append([column_name, column_desc])
 
             table2coldescription[table_name] = col2dec_lst
 
@@ -228,15 +229,15 @@ class Processor(BaseAgent):
         schema_desc_str = ''
         schema_desc_str += f"# Table: {table_name}, ({table_desc})\n"
         extracted_column_infos = []
-        for (col_full_name, col_extra_desc), (col_name, col_values_str) in zip(new_columns_desc, new_columns_val):
+        for (col_name_from_desc, col_extra_desc), (col_name, col_values_str) in zip(new_columns_desc, new_columns_val):
             col_extra_desc = 'And ' + str(col_extra_desc) if col_extra_desc != '' and str(
                 col_extra_desc) != 'nan' else ''
             col_extra_desc = col_extra_desc[:100]
 
             col_line_text = ''
             col_line_text += f'  ('
-            # FIX: Only show the actual database column name (col_name), not the processed version (col_full_name)
-            # This prevents the LLM from using lowercase variants like "facid" instead of actual "FacID"
+            # Use the original column name from the database (preserving exact case)
+            # col_name comes from col_values_str_lst which has the original column names
             col_line_text += f"{col_name},"
             if col_values_str != '':
                 col_line_text += f" Value examples: {col_values_str}."
