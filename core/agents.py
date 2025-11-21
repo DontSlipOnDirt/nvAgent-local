@@ -235,8 +235,9 @@ class Processor(BaseAgent):
 
             col_line_text = ''
             col_line_text += f'  ('
-            col_line_text += f"{col_name}, "
-            col_line_text += f"{col_full_name},"
+            # FIX: Only show the actual database column name (col_name), not the processed version (col_full_name)
+            # This prevents the LLM from using lowercase variants like "facid" instead of actual "FacID"
+            col_line_text += f"{col_name},"
             if col_values_str != '':
                 col_line_text += f" Value examples: {col_values_str}."
             if col_extra_desc != '':
@@ -1053,8 +1054,27 @@ print("y_data:", df['{y_col}'].tolist())
                 flag = False
         return flag
 
+    def _is_semantic_error(self, error_message: str) -> bool:
+        """
+        Detect semantic errors that cannot be fixed by refinement.
+        These are upstream issues in schema/query generation, not syntax/execution errors.
+        """
+        semantic_patterns = [
+            "does not have a column named",  # Column doesn't exist in table
+            "table.*does not exist",  # Table not found
+            "ambiguous column",  # Ambiguous column reference
+            "column reference is ambiguous",
+        ]
+        return any(pattern.lower() in error_message.lower() for pattern in semantic_patterns)
+
     def _refine_vql(self, nl_query: str, vql: str, db_info, exec_result: dict):
         error = exec_result['error']
+        
+        # FIX: Detect semantic errors that refinement cannot fix
+        # If error is semantic (upstream schema issue), don't waste attempts on refinement
+        if self._is_semantic_error(error):
+            return None  # Signal that refinement won't help
+        
         prompt = refiner_vql_template.format(query=nl_query, db_info=db_info, vql=vql, error=error)
         world_info = extract_world_info(self._message)
         reply = LLM_API_FUC(prompt, **world_info)
@@ -1149,10 +1169,16 @@ print("y_data:", df['{y_col}'].tolist())
         else:
             new_vql = self._refine_vql(query, vql, db_info, exec_result)
             message['try_times'] = message.get('try_times', 0) + 1
-            message['final_vql'] = new_vql
-            message['pred'] = code
-            message['fixed'] = True
-            message['send_to'] = VALIDATOR_NAME  # Send back to Refiner for another try
+            
+            # FIX: If semantic error detected, stop refinement (don't send back to Validator)
+            if new_vql is None:
+                message['pred'] = code
+                message['send_to'] = SYSTEM_NAME  # Give up - error is upstream
+            else:
+                message['final_vql'] = new_vql
+                message['pred'] = code
+                message['fixed'] = True
+                message['send_to'] = VALIDATOR_NAME  # Send back to Refiner for another try
         return
 
 
