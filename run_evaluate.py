@@ -1,7 +1,9 @@
 """
 Run evaluation on visEval_dataset
-Usage: uv run run_evaluate.py
-Note:
+Usage: python run_evaluate.py
+Example:
+uv run core/vllm_server.py
+uv run run_evaluate.py
 """
 
 import json
