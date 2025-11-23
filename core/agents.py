@@ -210,9 +210,8 @@ class Processor(BaseAgent):
                     1] == '':
                     column_desc = 'this is a number type column'
 
-                # Keep original column name (preserving case) instead of lowercase processed version
-                # This ensures LLM generates queries with correct case-sensitive column names
-                col2dec_lst.append([column_name, column_desc])
+                full_col_name = column_name.replace('_', ' ').lower()
+                col2dec_lst.append([full_col_name, column_desc])
 
             table2coldescription[table_name] = col2dec_lst
 
@@ -229,16 +228,15 @@ class Processor(BaseAgent):
         schema_desc_str = ''
         schema_desc_str += f"# Table: {table_name}, ({table_desc})\n"
         extracted_column_infos = []
-        for (col_name_from_desc, col_extra_desc), (col_name, col_values_str) in zip(new_columns_desc, new_columns_val):
+        for (col_full_name, col_extra_desc), (col_name, col_values_str) in zip(new_columns_desc, new_columns_val):
             col_extra_desc = 'And ' + str(col_extra_desc) if col_extra_desc != '' and str(
                 col_extra_desc) != 'nan' else ''
             col_extra_desc = col_extra_desc[:100]
 
             col_line_text = ''
             col_line_text += f'  ('
-            # Use the original column name from the database (preserving exact case)
-            # col_name comes from col_values_str_lst which has the original column names
-            col_line_text += f"{col_name},"
+            col_line_text += f"{col_name}, "
+            col_line_text += f"{col_full_name},"
             if col_values_str != '':
                 col_line_text += f" Value examples: {col_values_str}."
             if col_extra_desc != '':
@@ -299,13 +297,6 @@ class Processor(BaseAgent):
                 "augmented_explanation": "",
                 "query_difficulty": "0",
             }
-        
-        # FIX: If LLM fails to generate new_schema or returns empty, fallback to original schema
-        # This prevents the Composer from receiving empty schema and having to guess column names
-        if not result.get('new_schema') or result['new_schema'].strip() == '':
-            print(f"[WARNING] Processor returned empty new_schema, falling back to original schema")
-            result['new_schema'] = db_schema
-        
         print(f"query: {message['query']}\n")
         message['old_schema'] = db_schema
         message['filtered_schema'] = result["filtered_schema"]
@@ -1062,27 +1053,8 @@ print("y_data:", df['{y_col}'].tolist())
                 flag = False
         return flag
 
-    def _is_semantic_error(self, error_message: str) -> bool:
-        """
-        Detect semantic errors that cannot be fixed by refinement.
-        These are upstream issues in schema/query generation, not syntax/execution errors.
-        """
-        semantic_patterns = [
-            "does not have a column named",  # Column doesn't exist in table
-            "table.*does not exist",  # Table not found
-            "ambiguous column",  # Ambiguous column reference
-            "column reference is ambiguous",
-        ]
-        return any(pattern.lower() in error_message.lower() for pattern in semantic_patterns)
-
     def _refine_vql(self, nl_query: str, vql: str, db_info, exec_result: dict):
         error = exec_result['error']
-        
-        # FIX: Detect semantic errors that refinement cannot fix
-        # If error is semantic (upstream schema issue), don't waste attempts on refinement
-        if self._is_semantic_error(error):
-            return None  # Signal that refinement won't help
-        
         prompt = refiner_vql_template.format(query=nl_query, db_info=db_info, vql=vql, error=error)
         world_info = extract_world_info(self._message)
         reply = LLM_API_FUC(prompt, **world_info)
@@ -1177,16 +1149,10 @@ print("y_data:", df['{y_col}'].tolist())
         else:
             new_vql = self._refine_vql(query, vql, db_info, exec_result)
             message['try_times'] = message.get('try_times', 0) + 1
-            
-            # FIX: If semantic error detected, stop refinement (don't send back to Validator)
-            if new_vql is None:
-                message['pred'] = code
-                message['send_to'] = SYSTEM_NAME  # Give up - error is upstream
-            else:
-                message['final_vql'] = new_vql
-                message['pred'] = code
-                message['fixed'] = True
-                message['send_to'] = VALIDATOR_NAME  # Send back to Refiner for another try
+            message['final_vql'] = new_vql
+            message['pred'] = code
+            message['fixed'] = True
+            message['send_to'] = VALIDATOR_NAME  # Send back to Refiner for another try
         return
 
 

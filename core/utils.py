@@ -19,17 +19,17 @@ def parse_response(response: str) -> Dict:
     }
 
     #  Filtered Schema
-    filtered_schema_match = re.search(r'【Filtered Schema】\n(.*?)\n+【New Schema】', response, re.DOTALL)
+    filtered_schema_match = re.search(r'【Filtered Schema】\n(.*?)\n\n【New Schema】', response, re.DOTALL)
     if filtered_schema_match:
         result["filtered_schema"] = filtered_schema_match.group(1).strip()
 
     #  database Schema
-    new_schema_match = re.search(r'【New Schema】\n(.*?)\n+【Augmented Explanation】', response, re.DOTALL)
+    new_schema_match = re.search(r'【New Schema】\n(.*?)\n\n【Augmented Explanation】', response, re.DOTALL)
     if new_schema_match:
         result["new_schema"] = new_schema_match.group(1).strip()
 
     #  Format Explanation
-    augmented_explanation_match = re.search(r'【Augmented Explanation】\n(.*?)\n+【Classification】', response, re.DOTALL)
+    augmented_explanation_match = re.search(r'【Augmented Explanation】\n(.*?)\n\n【Classification】', response, re.DOTALL)
     if augmented_explanation_match:
         result["augmented_explanation"] = augmented_explanation_match.group(1).strip()
 
