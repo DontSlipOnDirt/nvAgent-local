@@ -299,6 +299,13 @@ class Processor(BaseAgent):
                 "augmented_explanation": "",
                 "query_difficulty": "0",
             }
+        
+        # FIX: If LLM fails to generate new_schema or returns empty, fallback to original schema
+        # This prevents the Composer from receiving empty schema and having to guess column names
+        if not result.get('new_schema') or result['new_schema'].strip() == '':
+            print(f"[WARNING] Processor returned empty new_schema, falling back to original schema")
+            result['new_schema'] = db_schema
+        
         print(f"query: {message['query']}\n")
         message['old_schema'] = db_schema
         message['filtered_schema'] = result["filtered_schema"]
