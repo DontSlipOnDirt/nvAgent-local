@@ -19,17 +19,20 @@ VLLM_BASE_URL = f"http://{VLLM_HOST}:{VLLM_PORT}/v1"
 
 # actually used models
 # VLLM_MODEL_NAME = "Qwen/Qwen2.5-7B-Instruct"
-VLLM_MODEL_NAME = "Qwen/Qwen2.5-Coder-14B-Instruct-AWQ"
+VLLM_MODEL_NAME = "Qwen/Qwen2.5-Coder-7B-Instruct"
+# VLLM_MODEL_NAME = "Qwen/Qwen2.5-Coder-14B-Instruct-AWQ"
+
 # VLLM_MODEL_NAME = "Qwen/Qwen2.5-Coder-32B-Instruct-AWQ"
+# VLLM_MODEL_NAME = "Qwen/Qwen3-Coder-30B-A3B-Instruct-FP8"
 
 # Inference Parameters, optimized for H100 with 20GB MiG slice
-VLLM_MAX_MODEL_LEN = 16384  # Maximum context length, change to 8192 next time
+VLLM_MAX_MODEL_LEN = 8192  # Maximum context length
 VLLM_MAX_TOKENS = 2048     # Maximum tokens to generate
 VLLM_TEMPERATURE = 0.0     # Deterministic output
 VLLM_GPU_MEMORY_UTILIZATION = 0.90  # Percentage of GPU usage
 
 # Quantization (for lower VRAM)
-VLLM_QUANTIZATION = "awq"  # Options: None, "awq", "gptq", "squeezellm"
+VLLM_QUANTIZATION = None  # Options: None, "awq", "gptq", "squeezellm"
 # Set to "awq" for 4-bit quantization if memory constrained
 
 # dtype configuration
