@@ -23,18 +23,30 @@ def setup_vision_model() -> Tuple[Optional[object], Optional[str]]:
     Returns:
         Tuple of (vision_model, vision_model_name)
     """
+    # Try OpenAI Vision first
+    try:
+        from core.openai_vision_config import USE_OPENAI_VISION, OPENAI_VISION_MODEL_NAME
+        from core.openai_vision_client import get_vision_model as get_openai_vision_model
+        
+        if USE_OPENAI_VISION:
+            print(f"Using OpenAI vision model: {OPENAI_VISION_MODEL_NAME}...")
+            return get_openai_vision_model(), OPENAI_VISION_MODEL_NAME
+    except ImportError:
+        pass
+
+    # Fallback to vLLM
     try:
         from core.vision_vllm_config import USE_VISION_VLLM, VISION_VLLM_MODEL_NAME
-        from core.vision_vllm_client import get_vision_model
+        from core.vision_vllm_client import get_vision_model as get_vllm_vision_model
         
         if USE_VISION_VLLM:
             print("Using local vision vLLM model...")
-            return get_vision_model(), VISION_VLLM_MODEL_NAME
+            return get_vllm_vision_model(), VISION_VLLM_MODEL_NAME
         else:
-            print("USE_VISION_VLLM=False, vision model disabled")
+            print("Vision model disabled (USE_OPENAI_VISION=False, USE_VISION_VLLM=False)")
             return None, None
     except ImportError:
-        print("Vision vLLM not configured, vision model disabled")
+        print("Vision modules not configured, vision model disabled")
         return None, None
 
 
