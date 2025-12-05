@@ -134,13 +134,29 @@ def save_results(result, text_model_name: str, vision_model_name: Optional[str],
     # Calculate single and multi-table scores
     def calc_scores(df_subset):
         if len(df_subset) == 0:
-            return {"query_count": 0, "invalid_rate": 0, "illegal_rate": 0, "pass_rate": 0}
-        return {
+            return {
+                "query_count": 0, 
+                "invalid_rate": 0, 
+                "illegal_rate": 0, 
+                "pass_rate": 0,
+                "readability_score": 0,
+                "quality_score": 0
+            }
+        
+        scores = {
             "query_count": len(df_subset),
             "invalid_rate": df_subset['invalid_rate'].mean(),
             "illegal_rate": df_subset['illegal rate'].mean(),
             "pass_rate": df_subset['pass_rate'].mean(),
         }
+        
+        if 'readability_score' in df_subset.columns:
+            scores['readability_score'] = df_subset['readability_score'].mean()
+        
+        if 'quality_score' in df_subset.columns:
+            scores['quality_score'] = df_subset['quality_score'].mean()
+            
+        return scores
     
     single_scores = calc_scores(detailed_df[~detailed_df['is_multi_table']])
     multi_scores = calc_scores(detailed_df[detailed_df['is_multi_table']])
