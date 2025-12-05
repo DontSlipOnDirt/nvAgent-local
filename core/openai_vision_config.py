@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Toggle for using OpenAI vision model
-USE_OPENAI_VISION = False
+USE_OPENAI_VISION = True
 
 # OpenAI Configuration
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")

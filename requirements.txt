@@ -18,7 +18,7 @@ sqlglot==25.10.0
 tqdm==4.66.5
 python-dotenv==1.0.0
 regex>=2022.1.18
+flask>=3.0.0
 
-# vLLM and dependencies (optional - for local LLM inference)
 vllm>=0.6.0
 ray>=2.9.0
