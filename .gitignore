@@ -21,6 +21,9 @@ uv.lock
 # data
 /visEval_dataset
 
+# chrome driver for layout check
+/chrome
+
 # Logs
 *.log
 agent_logs*

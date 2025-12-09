@@ -26,6 +26,7 @@ def main():
     folder = "visEval_dataset"
     library = 'matplotlib'
     log_folder = Path(f"evaluate_logs_test_{num_samples}")
+    webdriver_path = "/chrome/chromedriver-linux64/chromedriver" # set path to chrome driver
     
     print(f"\n{'='*60}")
     print(f"Running TEST evaluation on {num_samples} samples")

@@ -34,7 +34,7 @@ def setup_vision_model() -> Tuple[Optional[object], Optional[str]]:
     except ImportError:
         pass
 
-    # Fallback to vLLM
+    # try to fallback to vLLM
     try:
         from core.vision_vllm_config import USE_VISION_VLLM, VISION_VLLM_MODEL_NAME
         from core.vision_vllm_client import get_vision_model as get_vllm_vision_model
@@ -238,19 +238,29 @@ def print_results(text_model_name: str, vision_model_name: Optional[str],
 def main():
     """Main evaluation pipeline."""
     # Configuration
-    folder = "visEval_dataset"
+    data_path = "visEval_dataset"
     table_type = "all" # single, multiple, or all
     library = 'matplotlib'
     log_folder = Path("evaluate_logs")
+    webdriver_path = "/chrome/chromedriver-linux64/chromedriver" # set path to chrome driver
     
     # Setup models
     vision_model, vision_model_name = setup_vision_model()
     text_model_name = get_text_model_name()
     
     # Initialize components
-    dataset = Dataset(Path(folder))
-    agent = ChatManager(data_path=folder, log_path="./agent_logs.txt")
-    evaluator = Evaluator(webdriver_path=None, vision_model=vision_model)
+    dataset = Dataset(Path(data_path))
+    agent = ChatManager(data_path=data_path, log_path="./agent_logs.txt")
+    evaluator = Evaluator(webdriver_path=webdriver_path, vision_model=vision_model)
+
+    # Initialize OpenAI logger if using OpenAI vision
+    try:
+        from core.openai_vision_config import USE_OPENAI_VISION
+        if USE_OPENAI_VISION:
+            from core.openai_logger import openai_logger
+            openai_logger.init_paths(str(log_folder / "evaluation.log"))
+    except ImportError:
+        pass
     
     # Run evaluation
     config = {"library": library, "logs": log_folder}

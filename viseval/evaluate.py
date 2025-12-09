@@ -13,14 +13,16 @@ try:
 except (ImportError, OSError):
     CAIROSVG_AVAILABLE = False
 
-try:
-    from svglib.svglib import svg2rlg
-    from reportlab.graphics import renderPM
-    import io
-    import tempfile
-    SVGLIB_AVAILABLE = True
-except ImportError:
-    SVGLIB_AVAILABLE = False
+# try:
+#     from svglib.svglib import svg2rlg
+#     from reportlab.graphics import renderPM
+#     import io
+#     import tempfile
+#     SVGLIB_AVAILABLE = True
+# except ImportError:
+#     SVGLIB_AVAILABLE = False
+SVGLIB_AVAILABLE = False
+
 
 if not CAIROSVG_AVAILABLE and not SVGLIB_AVAILABLE:
     print("Warning: Neither cairosvg nor svglib is available. Vision model features requiring SVG to PNG conversion will be disabled.")
@@ -184,28 +186,28 @@ def convert_svg_to_base64(svg_string):
         png_string = cairosvg.svg2png(bytestring=svg_string)
         base64_encoded = base64.b64encode(png_string).decode("utf-8")
         return f"data:image/png;base64,{base64_encoded}"
-    elif SVGLIB_AVAILABLE:
-        with tempfile.NamedTemporaryFile(mode='w+', suffix='.svg', delete=False, encoding='utf-8') as f:
-            f.write(svg_string)
-            temp_path = f.name
+    # elif SVGLIB_AVAILABLE:
+    #     with tempfile.NamedTemporaryFile(mode='w+', suffix='.svg', delete=False, encoding='utf-8') as f:
+    #         f.write(svg_string)
+    #         temp_path = f.name
         
-        try:
-            drawing = svg2rlg(temp_path)
-            output = io.BytesIO()
-            renderPM.drawToFile(drawing, output, fmt="PNG")
-            png_string = output.getvalue()
-            base64_encoded = base64.b64encode(png_string).decode("utf-8")
-            return f"data:image/png;base64,{base64_encoded}"
-        finally:
-            try:
-                os.remove(temp_path)
-            except:
-                pass
+    #     try:
+    #         drawing = svg2rlg(temp_path)
+    #         output = io.BytesIO()
+    #         renderPM.drawToFile(drawing, output, fmt="PNG")
+    #         png_string = output.getvalue()
+    #         base64_encoded = base64.b64encode(png_string).decode("utf-8")
+    #         return f"data:image/png;base64,{base64_encoded}"
+    #     finally:
+    #         try:
+    #             os.remove(temp_path)
+    #         except:
+    #             pass
     else:
         raise ImportError(
             "Neither cairosvg nor svglib is installed. Please install one of them.\n"
-            "pip install cairosvg cairocffi (requires GTK+)\n"
-            "pip install svglib reportlab (pure python)"
+            "pip install cairosvg cairocffi\n"
+            "pip install svglib reportlab"
         )
 
 
