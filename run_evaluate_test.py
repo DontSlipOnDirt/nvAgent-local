@@ -46,13 +46,24 @@ def main():
     agent = ChatManager(data_path=folder, log_path=f"./agent_logs_test_{num_samples}.txt")
     evaluator = Evaluator(webdriver_path=None, vision_model=vision_model)
     
+    # Initialize OpenAI logger if using OpenAI vision
+    try:
+        from core.openai_vision_config import USE_OPENAI_VISION
+        if USE_OPENAI_VISION:
+            from core.openai_vision_client import init_log_path
+            init_log_path(str(log_folder / "evaluation.log"))
+    except ImportError:
+        pass
+
     # Run evaluation
     config = {"library": library, "logs": log_folder}
     result = run_evaluation(agent, dataset, evaluator, config)
     
     # Save and display results
     detailed_csv_path, scores_json_path, score = save_results(
-        result, text_model_name, vision_model_name, library, "all"
+        result, text_model_name, vision_model_name, library, "all",
+        log_folder=log_folder,
+        agent_log_path=f"agent_logs_test_{num_samples}.txt"
     )
     print_results(text_model_name, vision_model_name, score, 
                   detailed_csv_path, scores_json_path, log_folder)

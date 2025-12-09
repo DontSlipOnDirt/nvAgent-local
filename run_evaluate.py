@@ -34,7 +34,7 @@ def setup_vision_model() -> Tuple[Optional[object], Optional[str]]:
     except ImportError:
         pass
 
-    # try to fallback to vLLM
+    # Fallback to vLLM
     try:
         from core.vision_vllm_config import USE_VISION_VLLM, VISION_VLLM_MODEL_NAME
         from core.vision_vllm_client import get_vision_model as get_vllm_vision_model
@@ -84,7 +84,9 @@ def run_evaluation(agent, dataset, evaluator, config: dict):
 
 
 def save_results(result, text_model_name: str, vision_model_name: Optional[str], 
-                 library: str, table_type: str):
+                 library: str, table_type: str, 
+                 log_folder: Path = Path("evaluate_logs"),
+                 agent_log_path: str = "agent_logs.txt"):
     """
     Save evaluation results to CSV and JSON files.
     
@@ -94,6 +96,8 @@ def save_results(result, text_model_name: str, vision_model_name: Optional[str],
         vision_model_name: Name of vision model used (or None)
         library: Visualization library used
         table_type: single, multiple, or all
+        log_folder: Path to evaluation log folder
+        agent_log_path: Path to agent log file
         
     Returns:
         Tuple of (detailed_csv_path, scores_json_path)
@@ -197,9 +201,20 @@ def save_results(result, text_model_name: str, vision_model_name: Optional[str],
     with open(scores_json_path, "w") as f:
         json.dump(final_output, f, indent=2)
 
-    # shutil.move("api_trace.json", run_folder / "api_trace.json")
-    # shutil.move("agent_logs.txt", run_folder / "agent_logs.txt")
-    # shutil.move("evaluate_logs/evaluation.log", run_folder / "evaluation.log")
+    # Move logs to results folder
+    try:
+        if (Path("api_trace.json").exists()):
+            shutil.move("api_trace.json", run_folder / "api_trace.json")
+        if (Path(agent_log_path).exists()):
+            shutil.move(agent_log_path, run_folder / Path(agent_log_path).name)
+        
+        # Move OpenAI vision trace if it exists
+        openai_trace_path = log_folder / "openai_vision_trace.json"
+        if openai_trace_path.exists():
+            shutil.move(str(openai_trace_path), run_folder / "openai_vision_trace.json")
+            
+    except Exception as e:
+        print(f"Warning: Could not move log files: {e}")
     
     return detailed_csv_path, scores_json_path, score
 
@@ -238,7 +253,7 @@ def print_results(text_model_name: str, vision_model_name: Optional[str],
 def main():
     """Main evaluation pipeline."""
     # Configuration
-    data_path = "visEval_dataset"
+    folder = "visEval_dataset"
     table_type = "all" # single, multiple, or all
     library = 'matplotlib'
     log_folder = Path("evaluate_logs")
@@ -249,26 +264,26 @@ def main():
     text_model_name = get_text_model_name()
     
     # Initialize components
-    dataset = Dataset(Path(data_path))
-    agent = ChatManager(data_path=data_path, log_path="./agent_logs.txt")
+    dataset = Dataset(Path(folder))
+    agent = ChatManager(data_path=folder, log_path="./agent_logs.txt")
     evaluator = Evaluator(webdriver_path=webdriver_path, vision_model=vision_model)
-
+    
     # Initialize OpenAI logger if using OpenAI vision
     try:
         from core.openai_vision_config import USE_OPENAI_VISION
         if USE_OPENAI_VISION:
-            from core.openai_logger import openai_logger
-            openai_logger.init_paths(str(log_folder / "evaluation.log"))
+            from core.openai_vision_client import init_log_path
+            init_log_path(str(log_folder / "evaluation.log"))
     except ImportError:
         pass
-    
+
     # Run evaluation
     config = {"library": library, "logs": log_folder}
     result = run_evaluation(agent, dataset, evaluator, config)
     
     # Save and display results
     detailed_csv_path, scores_json_path, score = save_results(
-        result, text_model_name, vision_model_name, library, table_type
+        result, text_model_name, vision_model_name, library, table_type, log_folder
     )
     print_results(text_model_name, vision_model_name, score, 
                   detailed_csv_path, scores_json_path, log_folder)
