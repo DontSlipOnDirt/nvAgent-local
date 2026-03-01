@@ -257,7 +257,7 @@ def main():
     table_type = "all" # single, multiple, or all
     library = 'matplotlib'
     log_folder = Path("evaluate_logs")
-    webdriver_path = "/chrome/chromedriver-linux64/chromedriver" # set path to chrome driver
+    webdriver_path = "/chrome/chromedriver-linux64/chromedriver.exe" # set path to chrome driver
     
     # Setup models
     vision_model, vision_model_name = setup_vision_model()
