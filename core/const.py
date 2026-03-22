@@ -6,6 +6,9 @@ SYSTEM_NAME = 'System'
 PROCESSOR_NAME = "Processor"
 
 
+REVIEWER_NAME = 'Reviewer'
+MAX_REVIEW_ROUNDS = 3
+
 processor_template = """
 You are an experienced and professional database administrator. Given a database schema and a user query, your task is to analyze the query, filter the relevant schema, generate an optimized representation, and classify the query difficulty.
 
@@ -844,4 +847,30 @@ Now give your answer after thinking step by step:
 
 【Classification】
 
+"""
+
+REVIEWER_NAME = 'Reviewer'
+MAX_REVIEW_ROUNDS = 3
+
+reviewer_template = """
+You are a strict data visualization reviewer. 
+Your task is to review a generated chart based on a user's query and the chart image.
+
+User Query: {query}
+
+Chart Image: [Provided Image]
+
+Instructions:
+1.  Check if the chart matches the user query.
+2.  Check for obvious visual errors (e.g., overlapping text, cutoff labels, empty chart).
+3.  Check if the data seems plausible (though you can't verify exact numbers without the data, look for anomalies).
+
+Respond in the following format:
+PASS
+(If PASS, do not provide a reason)
+
+OR
+
+FAIL
+Reason: <concise explanation of why it failed>
 """

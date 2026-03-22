@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from core.agents import Processor, Composer, Validator
+from core.agents import Processor, Composer, Validator, Reviewer
 from core.const import MAX_ROUND, SYSTEM_NAME, PROCESSOR_NAME
 from core.utils import show_svg
 from viseval.dataset import Dataset
@@ -55,6 +55,11 @@ class ChartExecutionResult:
     # Error message if status is False
     error_msg: Optional[str] = None
 
+try:
+    from core.vision_vllm_config import ENABLE_REVIEWER_AGENT
+except ImportError:
+    ENABLE_REVIEWER_AGENT = False
+
 class ChatManager(object):
     def __init__(self, data_path: str, log_path: str):
         self.data_path = data_path + "/databases"
@@ -65,6 +70,9 @@ class ChatManager(object):
             Composer(),
             Validator(data_path=self.data_path)
         ]
+        if ENABLE_REVIEWER_AGENT:
+            self.chat_group.append(Reviewer())
+        
         INIT_LOG_PATH_FUNC(log_path)
 
     def ping_network(self):

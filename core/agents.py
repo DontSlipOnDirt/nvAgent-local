@@ -31,6 +31,19 @@ if not USE_VLLM:
 
 from core.const import *
 from typing import List
+import base64
+
+try:
+    from core.vision_vllm_config import ENABLE_REVIEWER_AGENT
+except ImportError:
+    ENABLE_REVIEWER_AGENT = False
+
+try:
+    from core.vision_vllm_client import VisionVLLMClient
+    from langchain_core.messages import HumanMessage
+except ImportError:
+    VisionVLLMClient = None
+    HumanMessage = None
 
 import matplotlib.pyplot as plt
 import os
@@ -55,6 +68,61 @@ class BaseAgent(metaclass=abc.ABCMeta):
 
     def talk(self, message: dict):
         pass
+
+class Reviewer(BaseAgent):
+    name = REVIEWER_NAME
+    description = "Review the generated chart using Vision VLLM."
+
+    def __init__(self):
+        super().__init__()
+        self.vision_client = VisionVLLMClient() if VisionVLLMClient else None
+
+    def talk(self, message: dict):
+        if message['send_to'] != self.name: return
+        
+        query = message.get('query')
+        image_base64 = message.get('image_base64')
+        
+        if not self.vision_client or not image_base64:
+            print("[Reviewer] Vision client not available or no image. Skipping review.")
+            message['send_to'] = SYSTEM_NAME
+            return
+
+        # Prepare prompt
+        prompt = reviewer_template.format(query=query)
+        print(f"[Reviewer] Analyzing chart for query: {query}")
+
+        try:
+            msg = HumanMessage(
+                content=[
+                    {"type": "text", "text": prompt},
+                    {
+                        "type": "image_url",
+                        "image_url": {"url": f"data:image/png;base64,{image_base64}"},
+                    },
+                ]
+            )
+            
+            response = self.vision_client.invoke([msg])
+            content = response.content.strip()
+            print(f"[Reviewer] Assessment: {content}")
+            
+            if "PASS" in content:
+                message['send_to'] = SYSTEM_NAME
+            else:
+                feedback = content
+                if "Reason:" in content:
+                    feedback = content.split("Reason:", 1)[1].strip()
+                
+                # Append feedback to query for the Composer
+                message['query'] = f"{query}. Validator Feedback: {feedback}"
+                
+                message['review_count'] = message.get('review_count', 0) + 1
+                message['send_to'] = COMPOSER_NAME 
+                
+        except Exception as e:
+            print(f"[Reviewer] Error: {e}")
+            message['send_to'] = SYSTEM_NAME
 
 
 class Processor(BaseAgent):
@@ -1006,7 +1074,8 @@ print("y_data:", df['{y_col}'].tolist())
       
         result = {
             'output': '',
-            'error': ''
+            'error': '',
+            'image_base64': None
         }
 
         
@@ -1024,6 +1093,15 @@ print("y_data:", df['{y_col}'].tolist())
                 exec(code, exec_globals)
            
             result['output'] = stdout_capture.getvalue()
+            
+            # Capture the current figure
+            if plt.get_fignums():
+                buf = io.BytesIO()
+                plt.savefig(buf, format='png')
+                buf.seek(0)
+                img_str = base64.b64encode(buf.read()).decode('utf-8')
+                result['image_base64'] = img_str
+                plt.close('all')
 
 
         except Exception as e:
@@ -1145,7 +1223,15 @@ print("y_data:", df['{y_col}'].tolist())
         elif not is_need_refine:
             message['try_times'] = message.get('try_times', 0) + 1
             message['pred'] = code
-            message['send_to'] = SYSTEM_NAME
+            
+            # --- Check if we should send to Reviewer ---
+            if ENABLE_REVIEWER_AGENT and VisionVLLMClient and message.get('review_count', 0) < MAX_REVIEW_ROUNDS and exec_result.get('image_base64'):
+                message['image_base64'] = exec_result['image_base64']
+                message['send_to'] = REVIEWER_NAME
+            else:
+                message['send_to'] = SYSTEM_NAME
+            # -------------------------------------------
+            
         else:
             new_vql = self._refine_vql(query, vql, db_info, exec_result)
             message['try_times'] = message.get('try_times', 0) + 1

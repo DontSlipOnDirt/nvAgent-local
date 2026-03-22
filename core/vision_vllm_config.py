@@ -5,7 +5,11 @@ Separate from text model to allow different configurations.
 """
 
 # Toggle for using local vision model
-USE_VISION_VLLM = False  # Set to when server is running
+USE_VISION_VLLM = True  # Set to True when server is running
+
+# Toggle for Visual Feedback Agent (Reviewer)
+# Set to False to disable the agent loop intervention, while keeping vision for evaluation metrics
+ENABLE_REVIEWER_AGENT = True
 
 # Vision vLLM Server Configuration
 VISION_VLLM_HOST = "localhost"
