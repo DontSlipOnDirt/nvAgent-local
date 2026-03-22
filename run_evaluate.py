@@ -266,7 +266,7 @@ def main():
     # Initialize components
     dataset = Dataset(Path(folder))
     agent = ChatManager(data_path=folder, log_path="./agent_logs.txt")
-    evaluator = Evaluator(webdriver_path=webdriver_path, vision_model=vision_model)
+    evaluator = Evaluator(webdriver_path=None, vision_model=vision_model)
     
     # Initialize OpenAI logger if using OpenAI vision
     try:

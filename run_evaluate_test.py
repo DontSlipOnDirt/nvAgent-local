@@ -44,7 +44,7 @@ def main():
     dataset.benchmark = itertools.islice(dataset.benchmark, num_samples)
     
     agent = ChatManager(data_path=folder, log_path=f"./agent_logs_test_{num_samples}.txt")
-    evaluator = Evaluator(webdriver_path=webdriver_path, vision_model=vision_model)
+    evaluator = Evaluator(webdriver_path=None, vision_model=vision_model)
     
     # Initialize OpenAI logger if using OpenAI vision
     try:
