@@ -12,6 +12,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Tuple, Optional
 
+from core import config as app_config
 from core.chat_manager import ChatManager
 from viseval import Dataset, Evaluator
 
@@ -24,30 +25,26 @@ def setup_vision_model() -> Tuple[Optional[object], Optional[str]]:
         Tuple of (vision_model, vision_model_name)
     """
     # Try OpenAI Vision first
-    try:
-        from core.openai_vision_config import USE_OPENAI_VISION, OPENAI_VISION_MODEL_NAME
-        from core.openai_vision_client import get_vision_model as get_openai_vision_model
-        
-        if USE_OPENAI_VISION:
-            print(f"Using OpenAI vision model: {OPENAI_VISION_MODEL_NAME}...")
-            return get_openai_vision_model(), OPENAI_VISION_MODEL_NAME
-    except ImportError:
-        pass
+    if app_config.USE_OPENAI_VISION:
+        try:
+            from core.openai_vision_client import get_vision_model as get_openai_vision_model
+            print(f"Using OpenAI vision model: {app_config.OPENAI_VISION_MODEL_NAME}...")
+            return get_openai_vision_model(), app_config.OPENAI_VISION_MODEL_NAME
+        except ImportError:
+            pass
 
     # Fallback to vLLM
-    try:
-        from core.vision_vllm_config import USE_VISION_VLLM, VISION_VLLM_MODEL_NAME
-        from core.vision_vllm_client import get_vision_model as get_vllm_vision_model
-        
-        if USE_VISION_VLLM:
+    if app_config.USE_VISION_VLLM:
+        try:
+            from core.vision_vllm_client import get_vision_model as get_vllm_vision_model
             print("Using local vision vLLM model...")
-            return get_vllm_vision_model(), VISION_VLLM_MODEL_NAME
-        else:
-            print("Vision model disabled (USE_OPENAI_VISION=False, USE_VISION_VLLM=False)")
+            return get_vllm_vision_model(), app_config.VISION_VLLM_MODEL_NAME
+        except ImportError:
+            print("Vision modules not configured, vision model disabled")
             return None, None
-    except ImportError:
-        print("Vision modules not configured, vision model disabled")
-        return None, None
+            
+    print("Vision model disabled in config (USE_OPENAI_VISION=False, USE_VISION_VLLM=False)")
+    return None, None
 
 
 def get_text_model_name() -> str:
@@ -57,14 +54,7 @@ def get_text_model_name() -> str:
     Returns:
         Model name string
     """
-    try:
-        from core.vllm_config import USE_VLLM, VLLM_MODEL_NAME
-        if USE_VLLM:
-            return VLLM_MODEL_NAME
-        else:
-            return "Azure OpenAI API"
-    except ImportError:
-        return "Azure OpenAI API"
+    return app_config.MODEL_NAME
 
 
 def run_evaluation(agent, dataset, evaluator, config: dict):
@@ -85,8 +75,8 @@ def run_evaluation(agent, dataset, evaluator, config: dict):
 
 def save_results(result, text_model_name: str, vision_model_name: Optional[str], 
                  library: str, table_type: str, 
-                 log_folder: Path = Path("evaluate_logs"),
-                 agent_log_path: str = "agent_logs.txt"):
+                 log_folder: Path = Path(app_config.LOG_FOLDER),
+                 agent_log_path: str = app_config.AGENT_LOG_FILE):
     """
     Save evaluation results to CSV and JSON files.
     
@@ -117,10 +107,10 @@ def save_results(result, text_model_name: str, vision_model_name: Optional[str],
             dataset_size = log_content.count("evaluation finished")
     else:
         # Fallback to counting from dataset JSON if no log exists
-        dataset_size = len(json.load(open('visEval_dataset/visEval.json'))) if table_type == 'all' else len(json.load(open('visEval_dataset/visEval_' + table_type + '.json')))
+        dataset_size = len(json.load(open(f'{app_config.DATASET_FOLDER}/visEval.json'))) if table_type == 'all' else len(json.load(open(f'{app_config.DATASET_FOLDER}/visEval_' + table_type + '.json')))
 
     # Load full dataset to classify instances as single/multi-table
-    with open('visEval_dataset/visEval.json') as f:
+    with open(f'{app_config.DATASET_FOLDER}/visEval.json') as f:
         full_dataset = json.load(f)
     
     # Load detailed results
@@ -253,11 +243,11 @@ def print_results(text_model_name: str, vision_model_name: Optional[str],
 def main():
     """Main evaluation pipeline."""
     # Configuration
-    folder = "visEval_dataset"
+    folder = app_config.DATASET_FOLDER
     table_type = "all" # single, multiple, or all
-    library = 'matplotlib'
-    log_folder = Path("evaluate_logs")
-    webdriver_path = "/chrome/chromedriver-linux64/chromedriver.exe" # set path to chrome driver
+    library = app_config.LIBRARY
+    log_folder = Path(app_config.LOG_FOLDER)
+    # webdriver_path = app_config.WEBDRIVER_PATH # set path to chrome driver
     
     # Setup models
     vision_model, vision_model_name = setup_vision_model()
@@ -265,17 +255,16 @@ def main():
     
     # Initialize components
     dataset = Dataset(Path(folder))
-    agent = ChatManager(data_path=folder, log_path="./agent_logs.txt")
+    agent = ChatManager(data_path=folder, log_path=f"./{app_config.AGENT_LOG_FILE}")
     evaluator = Evaluator(webdriver_path=None, vision_model=vision_model)
     
     # Initialize OpenAI logger if using OpenAI vision
-    try:
-        from core.openai_vision_config import USE_OPENAI_VISION
-        if USE_OPENAI_VISION:
+    if app_config.USE_OPENAI_VISION:
+        try:
             from core.openai_vision_client import init_log_path
-            init_log_path(str(log_folder / "evaluation.log"))
-    except ImportError:
-        pass
+            msg = init_log_path(str(log_folder / "evaluation.log"))
+        except ImportError:
+            pass
 
     # Run evaluation
     config = {"library": library, "logs": log_folder}

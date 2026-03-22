@@ -5,6 +5,7 @@ Example: python run_evaluate_test.py 50
 """
 import sys
 from pathlib import Path
+from core import config as app_config
 from core.chat_manager import ChatManager
 from viseval import Dataset, Evaluator
 from run_evaluate import (
@@ -23,17 +24,17 @@ def main():
     num_samples = int(sys.argv[1]) if len(sys.argv) > 1 else 50
     
     # Configuration
-    folder = "visEval_dataset"
-    library = 'matplotlib'
-    log_folder = Path(f"evaluate_logs_test_{num_samples}")
-    webdriver_path = "/chrome/chromedriver-linux64/chromedriver.exe" # set path to chrome driver
+    folder = app_config.DATASET_FOLDER
+    library = app_config.LIBRARY
+    log_folder = Path(f"{app_config.LOG_FOLDER}_test_{num_samples}")
+    webdriver_path = app_config.WEBDRIVER_PATH
     
     print(f"\n{'='*60}")
     print(f"Running TEST evaluation on {num_samples} samples")
     print(f"{'='*60}\n")
     
     # Setup models
-    vision_model, vision_model_name = setup_vision_model()
+    vision_model, vision_model_name = setup_vision_model() # Uses core.config internally now
     text_model_name = get_text_model_name()
     
     # Initialize components
@@ -47,13 +48,12 @@ def main():
     evaluator = Evaluator(webdriver_path=None, vision_model=vision_model)
     
     # Initialize OpenAI logger if using OpenAI vision
-    try:
-        from core.openai_vision_config import USE_OPENAI_VISION
-        if USE_OPENAI_VISION:
+    if app_config.USE_OPENAI_VISION:
+        try:
             from core.openai_vision_client import init_log_path
             init_log_path(str(log_folder / "evaluation.log"))
-    except ImportError:
-        pass
+        except ImportError:
+            pass
 
     # Run evaluation
     config = {"library": library, "logs": log_folder}
