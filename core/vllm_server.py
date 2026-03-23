@@ -5,7 +5,10 @@ Script to start vLLM server easily.
 
 import subprocess
 import sys
-from vllm_config import (
+import os
+
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from core.vllm_config import (
     VLLM_MODEL_NAME,
     VLLM_HOST,
     VLLM_PORT,

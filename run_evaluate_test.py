@@ -1,7 +1,7 @@
 """
 Run evaluation on a small subset for testing.
-Usage: python run_evaluate_test.py [num_samples]
-Example: python run_evaluate_test.py 50
+Usage: uv run run_evaluate_test.py [num_samples]
+Example: uv run run_evaluate_test.py 50
 """
 import sys
 from pathlib import Path

@@ -31,15 +31,6 @@ def setup_vision_model() -> Tuple[Optional[object], Optional[str]]:
             print(f"Using OpenAI vision model: {app_config.OPENAI_VISION_MODEL_NAME}...")
             return get_openai_vision_model(), app_config.OPENAI_VISION_MODEL_NAME
         except ImportError:
-            pass
-
-    # Fallback to vLLM
-    if app_config.USE_VISION_VLLM:
-        try:
-            from core.vision_vllm_client import get_vision_model as get_vllm_vision_model
-            print("Using local vision vLLM model...")
-            return get_vllm_vision_model(), app_config.VISION_VLLM_MODEL_NAME
-        except ImportError:
             print("Vision modules not configured, vision model disabled")
             return None, None
             

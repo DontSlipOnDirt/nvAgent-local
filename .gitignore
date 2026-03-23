@@ -29,6 +29,7 @@ uv.lock
 agent_logs*
 evaluate_logs*/
 api_trace.json
+openai_vision_trace.json
 
 # Temporary files
 *.svg

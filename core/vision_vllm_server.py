@@ -5,7 +5,10 @@ Script to start vision vLLM server for multimodal inference.
 
 import subprocess
 import sys
-from vision_vllm_config import (
+import os
+
+sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from core.vision_vllm_config import (
     VISION_VLLM_MODEL_NAME,
     VISION_VLLM_HOST,
     VISION_VLLM_PORT,

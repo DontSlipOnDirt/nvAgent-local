@@ -70,11 +70,11 @@ if USE_VLLM:
 # Toggle for Vision Models
 # Note: Evaluation logic typically tries OpenAI first, then vLLM if enabled.
 USE_OPENAI_VISION = True
-USE_VISION_VLLM = True
+USE_VISION_VLLM = False
 
 # Toggle for Reviewer Agent
 # Set to False to disable the agent loop intervention
-ENABLE_REVIEWER_AGENT = True
+ENABLE_REVIEWER_AGENT = False
 
 # --- OpenAI Vision Settings ---
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
