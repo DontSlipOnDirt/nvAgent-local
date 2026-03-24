@@ -34,7 +34,7 @@ def setup_vision_model() -> Tuple[Optional[object], Optional[str]]:
             print("Vision modules not configured, vision model disabled")
             return None, None
             
-    print("Vision model disabled in config (USE_OPENAI_VISION=False, USE_VISION_VLLM=False)")
+    print("Vision model disabled in config (USE_OPENAI_VISION=False)")
     return None, None
 
 

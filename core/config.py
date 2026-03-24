@@ -55,22 +55,13 @@ VLLM_QUANTIZATION = "awq_marlin"
 # Options: "auto", "float16", "bfloat16"
 VLLM_DTYPE = "auto"
 
-# --- Active Text Model Logic ---
-if USE_VLLM:
-    MODEL_NAME = VLLM_MODEL_NAME
-    print(f"[CONFIG] Using vLLM with model: {MODEL_NAME}")
-# else:
-#     MODEL_NAME = AZURE_MODEL_NAME
-#     print("[CONFIG] vLLM disabled, using Azure OpenAI API")
-
-
 # =============================================================================
 # Vision Model Configuration
 # =============================================================================
 # Toggle for Vision Models
 # Note: Evaluation logic typically tries OpenAI first, then vLLM if enabled.
-USE_OPENAI_VISION = True
-USE_VISION_VLLM = False
+USE_OPENAI_VISION = False
+USE_VISION_VLLM = True
 
 # Toggle for Reviewer Agent
 # Set to False to disable the agent loop intervention
@@ -86,15 +77,26 @@ OPENAI_VISION_TIMEOUT = 60
 
 # --- vLLM Vision Settings ---
 VISION_VLLM_HOST = "localhost"
-VISION_VLLM_PORT = 8001
+VISION_VLLM_PORT = 8000
 VISION_VLLM_BASE_URL = f"http://{VISION_VLLM_HOST}:{VISION_VLLM_PORT}/v1"
 
-# Recommended models: "Qwen/Qwen2-VL-7B-Instruct-AWQ", "microsoft/Phi-3-vision-128k-instruct"
-VISION_VLLM_MODEL_NAME = "Qwen/Qwen2-VL-7B-Instruct-AWQ"
+# VISION_VLLM_MODEL_NAME = "Qwen/Qwen2.5-VL-7B-Instruct-AWQ"
+# VISION_VLLM_MODEL_NAME = "Qwen/Qwen2.5-VL-72B-Instruct-AWQ"
+VISION_VLLM_MODEL_NAME = "Qwen/Qwen2.5-VL-7B-Instruct-AWQ"
+if USE_VISION_VLLM:
+    VLLM_MODEL_NAME = VISION_VLLM_MODEL_NAME
+
+# --- Active Text Model Logic ---
+if USE_VLLM:
+    MODEL_NAME = VLLM_MODEL_NAME
+    print(f"[CONFIG] Using vLLM with model: {MODEL_NAME}")
+# else:
+#     MODEL_NAME = AZURE_MODEL_NAME
+#     print("[CONFIG] vLLM disabled, using Azure OpenAI API")
 
 VISION_VLLM_MAX_MODEL_LEN = 8192
 VISION_VLLM_MAX_TOKENS = 512
 VISION_VLLM_TEMPERATURE = 0.0
-VISION_VLLM_GPU_MEMORY_UTILIZATION = 0.40
-VISION_VLLM_QUANTIZATION = "awq"
+VISION_VLLM_GPU_MEMORY_UTILIZATION = 0.90
+VISION_VLLM_QUANTIZATION = "awq_marlin"
 VISION_VLLM_DTYPE = "auto"
