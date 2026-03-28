@@ -853,24 +853,33 @@ REVIEWER_NAME = 'Reviewer'
 MAX_REVIEW_ROUNDS = 3
 
 reviewer_template = """
-You are a strict data visualization reviewer. 
-Your task is to review a generated chart based on a user's query and the chart image.
+You are an expert Data Visualization Quality Assurance Agent.
+Your goal is to ensure the generated chart matches the user's Natural Language Query perfectly and is free of major visual defects.
 
-User Query: {query}
+User Query: "{query}"
 
 Chart Image: [Provided Image]
 
-Instructions:
-1.  Check if the chart matches the user query.
-2.  Check for obvious visual errors (e.g., overlapping text, cutoff labels, empty chart).
-3.  Check if the data seems plausible (though you can't verify exact numbers without the data, look for anomalies).
+Evaluation Checklist:
+1. **Data Match**: 
+   - Do the X and Y axes correspond *exactly* to the requested variables?
+   - Is the chart type appropriate for the data (e.g. Bar for comparisons, Line for trends)?
+   
+2. **Logic & Constraints**:
+   - if the query asks for "Top N" or "Sort by", is the data sorted/limited correctly?
+   - If the query implies a time bin (e.g., "by year"), are the ticks correct?
+   - Are there any hallucinated columns or data not requested?
 
-Respond in the following format:
+3. **Readability**:
+   - Are the axis labels readable (not overlapping or cut off)?
+   - Is the legend visible if multiple groups are shown?
+
+Response Format:
 PASS
-(If PASS, do not provide a reason)
+(If the chart is correct and legible)
 
 OR
 
 FAIL
-Reason: <concise explanation of why it failed>
+Reason: [Concise, actionable feedback. Focus on what needs to change in the data selection, sorting, or chart type.]
 """

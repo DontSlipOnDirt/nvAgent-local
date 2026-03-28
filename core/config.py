@@ -65,7 +65,7 @@ USE_VISION_VLLM = True
 
 # Toggle for Reviewer Agent
 # Set to False to disable the agent loop intervention
-ENABLE_REVIEWER_AGENT = False
+ENABLE_REVIEWER_AGENT = True
 
 # --- OpenAI Vision Settings ---
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
