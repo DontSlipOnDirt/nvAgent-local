@@ -43,8 +43,8 @@ VLLM_PORT = 8000
 VLLM_BASE_URL = f"http://{VLLM_HOST}:{VLLM_PORT}/v1"
 
 # VLLM_MODEL_NAME = "Qwen/Qwen2.5-7B-Instruct"
-VLLM_MODEL_NAME = "Qwen/Qwen2.5-Coder-14B-Instruct-AWQ"
-# VLLM_MODEL_NAME = "Qwen/Qwen2.5-Coder-32B-Instruct-AWQ"
+# VLLM_MODEL_NAME = "Qwen/Qwen2.5-Coder-14B-Instruct-AWQ"
+VLLM_MODEL_NAME = "Qwen/Qwen2.5-Coder-32B-Instruct-AWQ"
 
 VLLM_MAX_MODEL_LEN = 8192
 VLLM_MAX_TOKENS = 1024
@@ -60,12 +60,12 @@ VLLM_DTYPE = "auto"
 # =============================================================================
 # Toggle for Vision Models
 # Note: Evaluation logic typically tries OpenAI first, then vLLM if enabled.
-USE_OPENAI_VISION = False
-USE_VISION_VLLM = True
+USE_OPENAI_VISION = True
+USE_VISION_VLLM = False
 
 # Toggle for Reviewer Agent
 # Set to False to disable the agent loop intervention
-ENABLE_REVIEWER_AGENT = True
+ENABLE_REVIEWER_AGENT = False
 
 # --- OpenAI Vision Settings ---
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")

@@ -564,12 +564,13 @@ else:
                         elif isinstance(expr.this, sqlglot.exp.Avg):
                             agg_func = 'mean'
 
+                # df = df.groupby(['{x_col}', '{group_col}']).size().reset_index(name='{y_col}')
+                
                 
                 if agg_func == 'size':
                     bin_code += f"""
 # Group by and calculate count
 if flag:
-    df = df.groupby(['{x_col}', '{group_col}']).size().reset_index(name='{y_col}')
 """
                 if agg_func == 'sum':
                     bin_code += f"""
@@ -653,11 +654,13 @@ else:
                 if library == 'matplotlib':
                     pivot = True
                     
+                    # df_pivot = df.pivot_table(index='{x_col}', columns='{group_col}', values='{y_col}', aggfunc='sum', fill_value=0)
+
                     vis_code += f"""
 fig,ax = plt.subplots(1,1,figsize=(10,4))
 ax.spines['top'].set_visible(False)
 ax.spines['right'].set_visible(False)
-df_pivot = df.pivot_table(index='{x_col}', columns='{group_col}', values='{y_col}', aggfunc='sum', fill_value=0)
+df_pivot = df.pivot(index='{x_col}', columns='{group_col}', values='{y_col}')
 df_pivot.plot(kind='bar', stacked=True, ax=ax, alpha=0.8)
 ax.set_xlabel('{x_col}')
 ax.set_ylabel('{y_col}')
@@ -1147,68 +1150,68 @@ print("y_data:", df['{y_col}'].tolist())
         new_code = parse_code_from_string(reply)
         return new_code
 
-    def _extract_vql_info(self, vql: str):
-        """Parse the key VQL parts used by semantic consistency checks."""
-        match = re.search(r'Visualize\s+([\w\s]+)\s+SELECT\s+(.*?)\s+FROM', vql, re.IGNORECASE | re.DOTALL)
-        if not match:
-            return None
+    # def _extract_vql_info(self, vql: str):
+    #     """Parse the key VQL parts used by semantic consistency checks."""
+    #     match = re.search(r'Visualize\s+([\w\s]+)\s+SELECT\s+(.*?)\s+FROM', vql, re.IGNORECASE | re.DOTALL)
+    #     if not match:
+    #         return None
 
-        vis_type = match.group(1).upper().strip()
-        select_columns = [col.strip() for col in match.group(2).split(',') if col.strip()]
-        return {
-            'vis_type': vis_type,
-            'select_columns': select_columns,
-            'has_group_by': bool(re.search(r'\bGROUP\s+BY\b', vql, re.IGNORECASE)),
-            'has_order_by': bool(re.search(r'\bORDER\s+BY\b', vql, re.IGNORECASE)),
-            'has_limit': bool(re.search(r'\bLIMIT\b', vql, re.IGNORECASE)),
-            'has_bin': bool(re.search(r'\bBIN\s+.+\s+BY\s+(YEAR|MONTH|DAY|WEEKDAY)\b', vql, re.IGNORECASE)),
-        }
+    #     vis_type = match.group(1).upper().strip()
+    #     select_columns = [col.strip() for col in match.group(2).split(',') if col.strip()]
+    #     return {
+    #         'vis_type': vis_type,
+    #         'select_columns': select_columns,
+    #         'has_group_by': bool(re.search(r'\bGROUP\s+BY\b', vql, re.IGNORECASE)),
+    #         'has_order_by': bool(re.search(r'\bORDER\s+BY\b', vql, re.IGNORECASE)),
+    #         'has_limit': bool(re.search(r'\bLIMIT\b', vql, re.IGNORECASE)),
+    #         'has_bin': bool(re.search(r'\bBIN\s+.+\s+BY\s+(YEAR|MONTH|DAY|WEEKDAY)\b', vql, re.IGNORECASE)),
+    #     }
 
-    def _collect_semantic_issues(self, query: str, vql: str):
-        """Detect likely query/VQL semantic mismatches that correlate with data-check failures."""
-        issues = []
-        info = self._extract_vql_info(vql)
-        if not info:
-            return ["VQL parse check failed: expected 'Visualize ... SELECT ... FROM ...' structure."]
+    # def _collect_semantic_issues(self, query: str, vql: str):
+    #     """Detect likely query/VQL semantic mismatches that correlate with data-check failures."""
+    #     issues = []
+    #     info = self._extract_vql_info(vql)
+    #     if not info:
+    #         return ["VQL parse check failed: expected 'Visualize ... SELECT ... FROM ...' structure."]
 
-        q = query.lower()
-        vis_type = info['vis_type']
-        select_columns = info['select_columns']
-        y_expr = select_columns[1].upper() if len(select_columns) > 1 else ''
+    #     q = query.lower()
+    #     vis_type = info['vis_type']
+    #     select_columns = info['select_columns']
+    #     y_expr = select_columns[1].upper() if len(select_columns) > 1 else ''
 
-        wants_count = bool(re.search(r'\b(number of|count|how many)\b', q))
-        wants_sum = bool(re.search(r'\b(total|sum)\b', q))
-        wants_time_bin = bool(re.search(r'\b(year|month|day|weekday)\b', q))
-        wants_order = bool(re.search(r'\b(sort|order|top\s+\d+|bottom\s+\d+|highest|lowest)\b', q))
-        wants_grouping = bool(re.search(r'\b(by|per|each)\b', q))
+    #     wants_count = bool(re.search(r'\b(number of|count|how many)\b', q))
+    #     wants_sum = bool(re.search(r'\b(total|sum)\b', q))
+    #     wants_time_bin = bool(re.search(r'\b(year|month|day|weekday)\b', q))
+    #     wants_order = bool(re.search(r'\b(sort|order|top\s+\d+|bottom\s+\d+|highest|lowest)\b', q))
+    #     wants_grouping = bool(re.search(r'\b(by|per|each)\b', q))
 
-        if wants_count and "COUNT(" not in y_expr:
-            issues.append("Query asks for counting, but y-axis expression is not COUNT(...).")
-        if wants_sum and "SUM(" not in y_expr:
-            issues.append("Query asks for total/sum, but y-axis expression is not SUM(...).")
-        if wants_time_bin and not info['has_bin']:
-            issues.append("Query mentions time binning (year/month/day/weekday), but VQL has no BIN ... BY clause.")
-        if wants_order and not info['has_order_by']:
-            issues.append("Query asks for sorting/top/bottom, but VQL has no ORDER BY clause.")
+    #     if wants_count and "COUNT(" not in y_expr:
+    #         issues.append("Query asks for counting, but y-axis expression is not COUNT(...).")
+    #     if wants_sum and "SUM(" not in y_expr:
+    #         issues.append("Query asks for total/sum, but y-axis expression is not SUM(...).")
+    #     if wants_time_bin and not info['has_bin']:
+    #         issues.append("Query mentions time binning (year/month/day/weekday), but VQL has no BIN ... BY clause.")
+    #     if wants_order and not info['has_order_by']:
+    #         issues.append("Query asks for sorting/top/bottom, but VQL has no ORDER BY clause.")
 
-        top_or_bottom = re.search(r'\b(top|bottom)\s+(\d+)\b', q)
-        if top_or_bottom and not info['has_limit']:
-            issues.append("Query asks for Top/Bottom N, but VQL has no LIMIT N clause.")
+    #     top_or_bottom = re.search(r'\b(top|bottom)\s+(\d+)\b', q)
+    #     if top_or_bottom and not info['has_limit']:
+    #         issues.append("Query asks for Top/Bottom N, but VQL has no LIMIT N clause.")
 
-        if "pie" in q or vis_type == "PIE":
-            if vis_type != "PIE":
-                issues.append("Query asks for a pie chart, but VQL visualize type is not PIE.")
-            if len(select_columns) != 2:
-                issues.append("PIE chart must select exactly two columns: category and aggregated value.")
-            if len(select_columns) > 1 and not any(fn in y_expr for fn in ["COUNT(", "SUM(", "AVG(", "MIN(", "MAX("]):
-                issues.append("PIE chart y-axis should be an aggregate expression (COUNT/SUM/AVG/MIN/MAX).")
-            if not info['has_group_by']:
-                issues.append("PIE chart should include GROUP BY for category aggregation.")
+    #     if "pie" in q or vis_type == "PIE":
+    #         if vis_type != "PIE":
+    #             issues.append("Query asks for a pie chart, but VQL visualize type is not PIE.")
+    #         if len(select_columns) != 2:
+    #             issues.append("PIE chart must select exactly two columns: category and aggregated value.")
+    #         if len(select_columns) > 1 and not any(fn in y_expr for fn in ["COUNT(", "SUM(", "AVG(", "MIN(", "MAX("]):
+    #             issues.append("PIE chart y-axis should be an aggregate expression (COUNT/SUM/AVG/MIN/MAX).")
+    #         if not info['has_group_by']:
+    #             issues.append("PIE chart should include GROUP BY for category aggregation.")
 
-        if wants_grouping and len(select_columns) >= 2 and ("COUNT(" in y_expr or "SUM(" in y_expr) and not info['has_group_by']:
-            issues.append("Query implies grouped aggregation, but VQL has aggregate y-axis without GROUP BY.")
+    #     if wants_grouping and len(select_columns) >= 2 and ("COUNT(" in y_expr or "SUM(" in y_expr) and not info['has_group_by']:
+    #         issues.append("Query implies grouped aggregation, but VQL has aggregate y-axis without GROUP BY.")
 
-        return issues
+    #     return issues
 
     def talk(self, message: dict):
         if message['send_to'] != self.name: return
@@ -1216,19 +1219,19 @@ print("y_data:", df['{y_col}'].tolist())
         db_id, vql, query= message.get('db_id'), message.get('final_vql'), message.get('query')
         db_info = message.get('new_schema')
 
-        semantic_issues = self._collect_semantic_issues(query, vql)
-        semantic_retry_count = message.get('semantic_retry_count', 0)
-        if semantic_issues and semantic_retry_count < 1:
-            synthetic_exec_result = {
-                'error': "Semantic consistency check failed before execution:\n- " + "\n- ".join(semantic_issues)
-            }
-            new_vql = self._refine_vql(query, vql, db_info, synthetic_exec_result)
-            if new_vql:
-                message['final_vql'] = new_vql
-                message['semantic_retry_count'] = semantic_retry_count + 1
-                message['fixed'] = True
-                message['send_to'] = VALIDATOR_NAME
-                return
+        # semantic_issues = self._collect_semantic_issues(query, vql)
+        # semantic_retry_count = message.get('semantic_retry_count', 0)
+        # if semantic_issues and semantic_retry_count < 1:
+        #     synthetic_exec_result = {
+        #         'error': "Semantic consistency check failed before execution:\n- " + "\n- ".join(semantic_issues)
+        #     }
+        #     new_vql = self._refine_vql(query, vql, db_info, synthetic_exec_result)
+        #     if new_vql:
+        #         message['final_vql'] = new_vql
+        #         message['semantic_retry_count'] = semantic_retry_count + 1
+        #         message['fixed'] = True
+        #         message['send_to'] = VALIDATOR_NAME
+        #         return
 
         db_path = f"{self.data_path}/{db_id}"
         library = message.get('library', 'matplotlib')
