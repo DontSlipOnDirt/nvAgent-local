@@ -44,14 +44,16 @@ VLLM_BASE_URL = f"http://{VLLM_HOST}:{VLLM_PORT}/v1"
 
 # VLLM_MODEL_NAME = "Qwen/Qwen2.5-7B-Instruct"
 # VLLM_MODEL_NAME = "Qwen/Qwen2.5-Coder-14B-Instruct-AWQ"
-VLLM_MODEL_NAME = "Qwen/Qwen2.5-Coder-32B-Instruct-AWQ"
+# VLLM_MODEL_NAME = "Qwen/Qwen2.5-Coder-32B-Instruct-AWQ"
+
+VLLM_MODEL_NAME = "Qwen/Qwen3-Coder-30B-A3B-Instruct-FP8"
 
 VLLM_MAX_MODEL_LEN = 8192
 VLLM_MAX_TOKENS = 1024
 VLLM_TEMPERATURE = 0.0
 VLLM_GPU_MEMORY_UTILIZATION = 0.90
 # Options: None, "awq", "gptq", "squeezellm", "awq_marlin"
-VLLM_QUANTIZATION = "awq_marlin"
+VLLM_QUANTIZATION = None
 # Options: "auto", "float16", "bfloat16"
 VLLM_DTYPE = "auto"
 
