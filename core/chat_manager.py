@@ -1,23 +1,42 @@
 # -*- coding: utf-8 -*-
-from core.agents import Processor, Composer, Validator
-from core.const import MAX_ROUND, SYSTEM_NAME, PROVIDER_NAME
+from core.agents import Processor, Composer, Validator, Reviewer
+from core.const import MAX_ROUND, SYSTEM_NAME, PROCESSOR_NAME
 from core.utils import show_svg
 from viseval.dataset import Dataset
 import matplotlib.pyplot as plt
 import traceback
 
-INIT_LOG__PATH_FUNC = None
+INIT_LOG_PATH_FUNC = None
 LLM_API_FUC = None
+
+# Check if vLLM should be used
 try:
-    from core import api
-    LLM_API_FUC = api.safe_call_llm
-    INIT_LOG__PATH_FUNC = api.init_log_path
-    print(f"Use func from core.api in chat_manager.py")
-except:
-    from core import llm
-    LLM_API_FUC = llm.safe_call_llm
-    INIT_LOG__PATH_FUNC = llm.init_log_path
-    print(f"Use func from core.llm in chat_manager.py")
+    from core.vllm_config import USE_VLLM
+except ImportError:
+    USE_VLLM = False
+
+if USE_VLLM:
+    try:
+        from core import vllm_client
+        LLM_API_FUC = vllm_client.safe_call_llm
+        INIT_LOG_PATH_FUNC = vllm_client.init_log_path
+        print(f"[CHAT_MANAGER] Using vLLM client")
+    except ImportError as e:
+        print(f"[CHAT_MANAGER] vLLM import failed: {e}")
+        print(f"[CHAT_MANAGER] Falling back to Azure OpenAI API")
+        USE_VLLM = False
+
+if not USE_VLLM:
+    try:
+        from core import api
+        LLM_API_FUC = api.safe_call_llm
+        INIT_LOG_PATH_FUNC = api.init_log_path
+        print(f"[CHAT_MANAGER] Using core.api (Azure OpenAI)")
+    except ImportError:
+        from core import llm
+        LLM_API_FUC = llm.safe_call_llm
+        INIT_LOG_PATH_FUNC = llm.init_log_path
+        print(f"[CHAT_MANAGER] Using core.llm (Azure OpenAI)")
 
 import time
 from pprint import pprint
@@ -36,6 +55,11 @@ class ChartExecutionResult:
     # Error message if status is False
     error_msg: Optional[str] = None
 
+try:
+    from core.vision_vllm_config import ENABLE_REVIEWER_AGENT
+except ImportError:
+    ENABLE_REVIEWER_AGENT = False
+
 class ChatManager(object):
     def __init__(self, data_path: str, log_path: str):
         self.data_path = data_path + "/databases"
@@ -46,7 +70,10 @@ class ChatManager(object):
             Composer(),
             Validator(data_path=self.data_path)
         ]
-        INIT_LOG__PATH_FUNC(log_path)
+        if ENABLE_REVIEWER_AGENT:
+            self.chat_group.append(Reviewer())
+        
+        INIT_LOG_PATH_FUNC(log_path)
 
     def ping_network(self):
         # check network status
@@ -66,7 +93,7 @@ class ChatManager(object):
     def start(self, user_message: dict):
         start_time = time.time()
         if user_message['send_to'] == SYSTEM_NAME:  # in the first round, pass message to prune
-            user_message['send_to'] = PROVIDER_NAME
+            user_message['send_to'] = PROCESSOR_NAME
         for _ in range(MAX_ROUND):  # start chat in group
             self._chat_single_round(user_message)
             if user_message['send_to'] == SYSTEM_NAME:  # should terminate chat

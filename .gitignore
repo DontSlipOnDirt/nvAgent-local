@@ -1,3 +1,17 @@
+.env
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
 
 # files from uv
 .python-version
@@ -6,3 +20,17 @@ uv.lock
 
 # data
 /visEval_dataset
+
+# chrome driver for layout check
+/chrome
+
+# Logs
+*.log
+agent_logs*
+evaluate_logs*/
+api_trace.json
+openai_vision_trace.json
+
+# Temporary files
+*.svg
+temp_*.svg

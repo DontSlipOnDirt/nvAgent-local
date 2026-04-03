@@ -1,0 +1,10 @@
+# core/openai_vision_config.py
+from core.config import (
+    USE_OPENAI_VISION,
+    OPENAI_API_KEY,
+    OPENAI_VISION_MODEL_NAME,
+    OPENAI_VISION_TEMPERATURE,
+    OPENAI_VISION_MAX_TOKENS,
+    OPENAI_VISION_MAX_RETRIES,
+    OPENAI_VISION_TIMEOUT
+)

@@ -5,10 +5,30 @@ from core.utils import show_svg
 import matplotlib.pyplot as plt
 import traceback
 
-from core import llm
-LLM_API_FUC = llm.safe_call_llm
-INIT_LOG__PATH_FUNC = llm.init_log_path
-print(f"Use func from core.llm in chat_manager.py")
+INIT_LOG_PATH_FUNC = None
+LLM_API_FUC = None
+
+# Check if vLLM should be used
+try:
+    from core.vllm_config import USE_VLLM
+except ImportError:
+    USE_VLLM = False
+
+if USE_VLLM:
+    try:
+        from core import vllm_client
+        LLM_API_FUC = vllm_client.safe_call_llm
+        INIT_LOG_PATH_FUNC = vllm_client.init_log_path
+        print(f"[WEB_CHAT_MANAGER] Using vLLM client")
+    except ImportError:
+        USE_VLLM = False
+        print(f"[WEB_CHAT_MANAGER] Falling back to standard LLM")
+
+if not USE_VLLM:
+    from core import llm
+    LLM_API_FUC = llm.safe_call_llm
+    INIT_LOG_PATH_FUNC = llm.init_log_path
+    print(f"[WEB_CHAT_MANAGER] Using core.llm")
 
 import time
 from pprint import pprint
@@ -37,7 +57,7 @@ class ChatManager(object):
             Generator(),
             Corrector(csv_files=self.csv_files)
         ]
-        INIT_LOG__PATH_FUNC(log_path)
+        INIT_LOG_PATH_FUNC(log_path)
 
     def ping_network(self):
         # check network status

@@ -1,0 +1,151 @@
+id,chart,hardness,code execution_fail_rate,surface-form check_fail_rate,deconstruction_fail_rate,chart type check_fail_rate,data check_fail_rate,order check_fail_rate,layout check_fail_rate,scale and ticks check_fail_rate,invalid_rate,illegal rate,pass_rate,quality_score,readability_score,is_multi_table,text_model,vision_model
+4,Pie,Medium,0.5,0.0,0.0,0.0,0.5,0.0,0.0,0.0,0.5,0.5,0.0,0.0,,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+4,Pie,Medium,0.5,0.0,0.0,0.0,0.5,0.0,0.0,0.0,0.5,0.5,0.0,0.0,,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+4,Pie,Medium,0.5,0.0,0.0,0.0,0.5,0.0,0.0,0.0,0.5,0.5,0.0,0.0,,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+5,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,3.0,3.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+5,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,3.0,3.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+5,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,3.0,3.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+8,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+8,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+8,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+9,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.5,0.0,0.0,1.0,3.5,3.5,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+9,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.5,0.0,0.0,1.0,3.5,3.5,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+9,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.5,0.0,0.0,1.0,3.5,3.5,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+14,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+14,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+14,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+21,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+21,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+21,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+32,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,3.0,3.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+32,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,3.0,3.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+32,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,3.0,3.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+33,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+33,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+33,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+34,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,3.0,3.0,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+34,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,3.0,3.0,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+34,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,3.0,3.0,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+35,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+35,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+35,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+36,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+36,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+36,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+37,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+37,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+37,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+46,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+46,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+46,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+54,Pie,Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+54,Pie,Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+54,Pie,Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+55,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.5,0.0,0.0,1.0,4.0,4.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+55,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.5,0.0,0.0,1.0,4.0,4.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+55,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.5,0.0,0.0,1.0,4.0,4.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+62,Scatter,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,2.5,2.5,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+62,Scatter,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,2.5,2.5,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+62,Scatter,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,2.5,2.5,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+63,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+63,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+63,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+64,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,4.333333333333333,4.333333333333333,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+64,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,4.333333333333333,4.333333333333333,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+64,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,4.333333333333333,4.333333333333333,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+65,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,2.0,2.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+65,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,2.0,2.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+65,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,2.0,2.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+68,Bar,Hard,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+68,Bar,Hard,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+68,Bar,Hard,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+69,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,2.0,2.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+69,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,2.0,2.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+69,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,2.0,2.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+72,Bar,Hard,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.5,0.5,0.0,0.5,1.5,3.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+72,Bar,Hard,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.5,0.5,0.0,0.5,1.5,3.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+72,Bar,Hard,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.5,0.5,0.0,0.5,1.5,3.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+74,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,4.0,4.0,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+74,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,4.0,4.0,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+74,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,4.0,4.0,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+77,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,3.0,3.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+77,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,3.0,3.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+77,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,3.0,3.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+81,Pie,Hard,0.0,0.0,0.0,0.0,0.25,0.0,0.0,0.0,0.0,0.25,0.75,3.0,4.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+81,Pie,Hard,0.0,0.0,0.0,0.0,0.25,0.0,0.0,0.0,0.0,0.25,0.75,3.0,4.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+81,Pie,Hard,0.0,0.0,0.0,0.0,0.25,0.0,0.0,0.0,0.0,0.25,0.75,3.0,4.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+86,Bar,Easy,0.0,0.0,0.0,0.0,0.5,0.0,0.0,0.5,0.0,0.5,0.5,1.5,3.0,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+86,Bar,Easy,0.0,0.0,0.0,0.0,0.5,0.0,0.0,0.5,0.0,0.5,0.5,1.5,3.0,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+86,Bar,Easy,0.0,0.0,0.0,0.0,0.5,0.0,0.0,0.5,0.0,0.5,0.5,1.5,3.0,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+93,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+93,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+93,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+94,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,4.25,4.25,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+94,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,4.25,4.25,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+94,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,4.25,4.25,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+95,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+95,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+95,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+96,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,5.0,5.0,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+96,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,5.0,5.0,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+96,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,5.0,5.0,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+98,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,2.0,2.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+98,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,2.0,2.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+98,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,2.0,2.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+103,Pie,Hard,0.5,0.0,0.0,0.0,0.5,0.0,0.0,0.0,0.5,0.5,0.0,0.0,,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+103,Pie,Hard,0.5,0.0,0.0,0.0,0.5,0.0,0.0,0.0,0.5,0.5,0.0,0.0,,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+103,Pie,Hard,0.5,0.0,0.0,0.0,0.5,0.0,0.0,0.0,0.5,0.5,0.0,0.0,,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+120,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,2.0,2.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+120,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,2.0,2.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+120,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,2.0,2.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+131,Pie,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,5.0,5.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+131,Pie,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,5.0,5.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+131,Pie,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,5.0,5.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+138,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+138,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+138,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+146,Stacked Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,5.0,5.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+146,Stacked Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,5.0,5.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+146,Stacked Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,5.0,5.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+150,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+150,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+150,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+158,Bar,Hard,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+158,Bar,Hard,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+158,Bar,Hard,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+163,Line,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,3.0,3.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+163,Line,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,3.0,3.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+163,Line,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,3.0,3.0,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+173,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+173,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+173,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+175,Scatter,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,4.333333333333333,4.333333333333333,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+175,Scatter,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,4.333333333333333,4.333333333333333,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+175,Scatter,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,4.333333333333333,4.333333333333333,True,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+186,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,3.0,3.0,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+186,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,3.0,3.0,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+186,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,3.0,3.0,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+189,Stacked Bar,Extra Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,3.0,3.0,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+189,Stacked Bar,Extra Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,3.0,3.0,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+189,Stacked Bar,Extra Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,3.0,3.0,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+194,Stacked Bar,Extra Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,3.0,3.0,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+194,Stacked Bar,Extra Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,3.0,3.0,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+194,Stacked Bar,Extra Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,3.0,3.0,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+195,Stacked Bar,Extra Hard,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+195,Stacked Bar,Extra Hard,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+195,Stacked Bar,Extra Hard,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+196,Stacked Bar,Extra Hard,0.0,0.0,0.0,0.4,0.4,0.0,0.0,0.0,0.0,0.4,0.6,2.6,4.333333333333333,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+196,Stacked Bar,Extra Hard,0.0,0.0,0.0,0.4,0.4,0.0,0.0,0.0,0.0,0.4,0.6,2.6,4.333333333333333,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+196,Stacked Bar,Extra Hard,0.0,0.0,0.0,0.4,0.4,0.0,0.0,0.0,0.0,0.4,0.6,2.6,4.333333333333333,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+201,Stacked Bar,Extra Hard,0.0,0.0,0.0,0.2,0.2,0.0,0.0,0.0,0.0,0.2,0.8,3.2,4.0,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+201,Stacked Bar,Extra Hard,0.0,0.0,0.0,0.2,0.2,0.0,0.0,0.0,0.0,0.2,0.8,3.2,4.0,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+201,Stacked Bar,Extra Hard,0.0,0.0,0.0,0.2,0.2,0.0,0.0,0.0,0.0,0.2,0.8,3.2,4.0,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+202,Stacked Bar,Extra Hard,0.0,0.0,0.0,0.5,0.5,0.0,0.0,0.0,0.0,0.5,0.5,2.0,4.0,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+202,Stacked Bar,Extra Hard,0.0,0.0,0.0,0.5,0.5,0.0,0.0,0.0,0.0,0.5,0.5,2.0,4.0,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+202,Stacked Bar,Extra Hard,0.0,0.0,0.0,0.5,0.5,0.0,0.0,0.0,0.0,0.5,0.5,2.0,4.0,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+205,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,3.0,3.0,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+205,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,3.0,3.0,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+205,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,1.0,3.0,3.0,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+210,Stacked Bar,Extra Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,5.0,5.0,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+210,Stacked Bar,Extra Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,5.0,5.0,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini
+210,Stacked Bar,Extra Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,5.0,5.0,False,Qwen/Qwen2.5-Coder-14B-Instruct-AWQ,gpt-4o-mini

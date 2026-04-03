@@ -1,0 +1,601 @@
+id,chart,hardness,code execution_fail_rate,surface-form check_fail_rate,deconstruction_fail_rate,chart type check_fail_rate,data check_fail_rate,order check_fail_rate,layout check_fail_rate,scale and ticks check_fail_rate,invalid_rate,illegal rate,pass_rate,quality_score,readability_score,is_multi_table,text_model,vision_model
+4,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+4,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+4,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+5,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+5,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+5,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+8,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+8,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+8,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+9,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+9,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+9,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+14,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+14,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+14,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+21,Pie,Medium,0.0,0.0,0.0,0.0,0.5,0.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+21,Pie,Medium,0.0,0.0,0.0,0.0,0.5,0.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+21,Pie,Medium,0.0,0.0,0.0,0.0,0.5,0.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+32,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+32,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+32,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+33,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+33,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+33,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+34,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+34,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+34,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+35,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+35,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+35,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+36,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+36,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+36,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+37,Pie,Medium,0.0,0.0,0.0,0.5,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+37,Pie,Medium,0.0,0.0,0.0,0.5,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+37,Pie,Medium,0.0,0.0,0.0,0.5,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+46,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+46,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+46,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+54,Pie,Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+54,Pie,Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+54,Pie,Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+55,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+55,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+55,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+62,Scatter,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+62,Scatter,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+62,Scatter,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+63,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+63,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+63,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+64,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+64,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+64,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+65,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+65,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+65,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+68,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+68,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+68,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+69,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+69,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+69,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+72,Bar,Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+72,Bar,Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+72,Bar,Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+74,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+74,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+74,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+77,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+77,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+77,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+81,Pie,Hard,0.0,0.0,0.0,0.0,0.5,0.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+81,Pie,Hard,0.0,0.0,0.0,0.0,0.5,0.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+81,Pie,Hard,0.0,0.0,0.0,0.0,0.5,0.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+86,Bar,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+86,Bar,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+86,Bar,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+93,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+93,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+93,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+94,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+94,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+94,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+95,Pie,Easy,0.6666666666666666,0.0,0.0,0.0,0.3333333333333333,0.0,0.0,0.0,0.6666666666666666,0.3333333333333333,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+95,Pie,Easy,0.6666666666666666,0.0,0.0,0.0,0.3333333333333333,0.0,0.0,0.0,0.6666666666666666,0.3333333333333333,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+95,Pie,Easy,0.6666666666666666,0.0,0.0,0.0,0.3333333333333333,0.0,0.0,0.0,0.6666666666666666,0.3333333333333333,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+96,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+96,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+96,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+98,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+98,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+98,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+103,Pie,Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+103,Pie,Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+103,Pie,Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+120,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+120,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+120,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+131,Pie,Medium,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+131,Pie,Medium,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+131,Pie,Medium,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+138,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+138,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+138,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+146,Stacked Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+146,Stacked Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+146,Stacked Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+150,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+150,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+150,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+158,Bar,Hard,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+158,Bar,Hard,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+158,Bar,Hard,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+163,Line,Hard,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+163,Line,Hard,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+163,Line,Hard,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+173,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+173,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+173,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+175,Scatter,Medium,0.6666666666666666,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.6666666666666666,0.0,0.3333333333333333,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+175,Scatter,Medium,0.6666666666666666,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.6666666666666666,0.0,0.3333333333333333,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+175,Scatter,Medium,0.6666666666666666,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.6666666666666666,0.0,0.3333333333333333,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+186,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+186,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+186,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+189,Stacked Bar,Extra Hard,0.0,0.0,0.0,0.5,0.25,0.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+189,Stacked Bar,Extra Hard,0.0,0.0,0.0,0.5,0.25,0.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+189,Stacked Bar,Extra Hard,0.0,0.0,0.0,0.5,0.25,0.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+194,Stacked Bar,Extra Hard,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+194,Stacked Bar,Extra Hard,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+194,Stacked Bar,Extra Hard,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+195,Stacked Bar,Extra Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+195,Stacked Bar,Extra Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+195,Stacked Bar,Extra Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+196,Stacked Bar,Extra Hard,0.0,0.0,0.0,0.6,0.8,0.0,0.0,0.0,0.0,0.8,0.2,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+196,Stacked Bar,Extra Hard,0.0,0.0,0.0,0.6,0.8,0.0,0.0,0.0,0.0,0.8,0.2,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+196,Stacked Bar,Extra Hard,0.0,0.0,0.0,0.6,0.8,0.0,0.0,0.0,0.0,0.8,0.2,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+201,Stacked Bar,Extra Hard,0.2,0.0,0.0,0.2,0.0,0.0,0.0,0.0,0.2,0.2,0.6,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+201,Stacked Bar,Extra Hard,0.2,0.0,0.0,0.2,0.0,0.0,0.0,0.0,0.2,0.2,0.6,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+201,Stacked Bar,Extra Hard,0.2,0.0,0.0,0.2,0.0,0.0,0.0,0.0,0.2,0.2,0.6,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+202,Stacked Bar,Extra Hard,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.5,0.0,0.5,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+202,Stacked Bar,Extra Hard,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.5,0.0,0.5,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+202,Stacked Bar,Extra Hard,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.5,0.0,0.5,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+205,Bar,Medium,0.6666666666666666,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.6666666666666666,0.0,0.3333333333333333,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+205,Bar,Medium,0.6666666666666666,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.6666666666666666,0.0,0.3333333333333333,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+205,Bar,Medium,0.6666666666666666,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.6666666666666666,0.0,0.3333333333333333,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+210,Stacked Bar,Extra Hard,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+210,Stacked Bar,Extra Hard,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+210,Stacked Bar,Extra Hard,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+211,Stacked Bar,Extra Hard,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+211,Stacked Bar,Extra Hard,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+211,Stacked Bar,Extra Hard,0.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+219,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+219,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+219,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+224,Stacked Bar,Extra Hard,0.3333333333333333,0.0,0.0,0.3333333333333333,0.0,0.0,0.0,0.0,0.3333333333333333,0.3333333333333333,0.3333333333333333,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+224,Stacked Bar,Extra Hard,0.3333333333333333,0.0,0.0,0.3333333333333333,0.0,0.0,0.0,0.0,0.3333333333333333,0.3333333333333333,0.3333333333333333,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+224,Stacked Bar,Extra Hard,0.3333333333333333,0.0,0.0,0.3333333333333333,0.0,0.0,0.0,0.0,0.3333333333333333,0.3333333333333333,0.3333333333333333,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+225,Stacked Bar,Extra Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+225,Stacked Bar,Extra Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+225,Stacked Bar,Extra Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+231,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+231,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+231,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+233,Bar,Medium,0.6666666666666666,0.0,0.0,0.0,0.3333333333333333,0.0,0.0,0.0,0.6666666666666666,0.3333333333333333,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+233,Bar,Medium,0.6666666666666666,0.0,0.0,0.0,0.3333333333333333,0.0,0.0,0.0,0.6666666666666666,0.3333333333333333,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+233,Bar,Medium,0.6666666666666666,0.0,0.0,0.0,0.3333333333333333,0.0,0.0,0.0,0.6666666666666666,0.3333333333333333,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+238,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+238,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+238,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+246,Bar,Medium,0.5,0.0,0.0,0.0,0.25,0.0,0.0,0.0,0.5,0.25,0.25,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+246,Bar,Medium,0.5,0.0,0.0,0.0,0.25,0.0,0.0,0.0,0.5,0.25,0.25,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+246,Bar,Medium,0.5,0.0,0.0,0.0,0.25,0.0,0.0,0.0,0.5,0.25,0.25,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+247,Bar,Medium,0.5,0.0,0.0,0.0,0.25,0.0,0.0,0.0,0.5,0.25,0.25,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+247,Bar,Medium,0.5,0.0,0.0,0.0,0.25,0.0,0.0,0.0,0.5,0.25,0.25,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+247,Bar,Medium,0.5,0.0,0.0,0.0,0.25,0.0,0.0,0.0,0.5,0.25,0.25,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+248,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+248,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+248,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+252,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+252,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+252,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+264,Bar,Medium,0.25,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.25,0.0,0.75,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+264,Bar,Medium,0.25,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.25,0.0,0.75,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+264,Bar,Medium,0.25,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.25,0.0,0.75,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+265,Bar,Medium,0.0,0.0,0.0,0.3333333333333333,0.6666666666666666,0.0,0.0,0.0,0.0,0.6666666666666666,0.3333333333333333,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+265,Bar,Medium,0.0,0.0,0.0,0.3333333333333333,0.6666666666666666,0.0,0.0,0.0,0.0,0.6666666666666666,0.3333333333333333,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+265,Bar,Medium,0.0,0.0,0.0,0.3333333333333333,0.6666666666666666,0.0,0.0,0.0,0.0,0.6666666666666666,0.3333333333333333,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+267,Line,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+267,Line,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+267,Line,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+273,Line,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+273,Line,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+273,Line,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+285,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+285,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+285,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+286,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+286,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+286,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+291,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+291,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+291,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+292,Scatter,Medium,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.5,0.0,0.5,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+292,Scatter,Medium,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.5,0.0,0.5,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+292,Scatter,Medium,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.5,0.0,0.5,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+293,Bar,Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+293,Bar,Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+293,Bar,Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+295,Bar,Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+295,Bar,Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+295,Bar,Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+296,Bar,Hard,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+296,Bar,Hard,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+296,Bar,Hard,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+297,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+297,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+297,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+306,Pie,Easy,0.0,0.0,0.0,0.0,0.6666666666666666,0.0,0.0,0.0,0.0,0.6666666666666666,0.3333333333333333,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+306,Pie,Easy,0.0,0.0,0.0,0.0,0.6666666666666666,0.0,0.0,0.0,0.0,0.6666666666666666,0.3333333333333333,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+306,Pie,Easy,0.0,0.0,0.0,0.0,0.6666666666666666,0.0,0.0,0.0,0.0,0.6666666666666666,0.3333333333333333,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+308,Scatter,Easy,0.5,0.0,0.0,0.0,0.5,0.0,0.0,0.0,0.5,0.5,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+308,Scatter,Easy,0.5,0.0,0.0,0.0,0.5,0.0,0.0,0.0,0.5,0.5,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+308,Scatter,Easy,0.5,0.0,0.0,0.0,0.5,0.0,0.0,0.0,0.5,0.5,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+312,Pie,Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+312,Pie,Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+312,Pie,Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+316,Line,Medium,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+316,Line,Medium,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+316,Line,Medium,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+328,Scatter,Medium,0.5,0.0,0.0,0.0,0.5,0.0,0.0,0.0,0.5,0.5,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+328,Scatter,Medium,0.5,0.0,0.0,0.0,0.5,0.0,0.0,0.0,0.5,0.5,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+328,Scatter,Medium,0.5,0.0,0.0,0.0,0.5,0.0,0.0,0.0,0.5,0.5,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+335,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+335,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+335,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+338,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+338,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+338,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+340,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+340,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+340,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+342,Line,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+342,Line,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+342,Line,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+354,Scatter,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+354,Scatter,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+354,Scatter,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+367,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+367,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+367,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+368,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+368,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+368,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+370,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+370,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+370,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+376,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+376,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+376,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+387,Grouping Scatter,Easy,0.5,0.0,0.0,0.25,0.5,0.0,0.0,0.0,0.5,0.5,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+387,Grouping Scatter,Easy,0.5,0.0,0.0,0.25,0.5,0.0,0.0,0.0,0.5,0.5,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+387,Grouping Scatter,Easy,0.5,0.0,0.0,0.25,0.5,0.0,0.0,0.0,0.5,0.5,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+399,Scatter,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+399,Scatter,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+399,Scatter,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+400,Scatter,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+400,Scatter,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+400,Scatter,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+402,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+402,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+402,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+403,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+403,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+403,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+405,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+405,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+405,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+409,Grouping Scatter,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+409,Grouping Scatter,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+409,Grouping Scatter,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+416,Line,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+416,Line,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+416,Line,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+419,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+419,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+419,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+432,Scatter,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+432,Scatter,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+432,Scatter,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+433,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+433,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+433,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+440,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+440,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+440,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+441,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+441,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+441,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+446,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+446,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+446,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+451,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+451,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+451,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+457,Pie,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+457,Pie,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+457,Pie,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+461,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+461,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+461,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+462,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+462,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+462,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+463,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+463,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+463,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+464,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+464,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+464,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+470,Line,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+470,Line,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+470,Line,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+471,Line,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+471,Line,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+471,Line,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+478,Pie,Medium,0.5,0.0,0.0,0.0,0.5,0.0,0.0,0.0,0.5,0.5,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+478,Pie,Medium,0.5,0.0,0.0,0.0,0.5,0.0,0.0,0.0,0.5,0.5,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+478,Pie,Medium,0.5,0.0,0.0,0.0,0.5,0.0,0.0,0.0,0.5,0.5,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+479,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+479,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+479,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+481,Bar,Medium,0.3333333333333333,0.0,0.0,0.0,0.6666666666666666,0.0,0.0,0.0,0.3333333333333333,0.6666666666666666,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+481,Bar,Medium,0.3333333333333333,0.0,0.0,0.0,0.6666666666666666,0.0,0.0,0.0,0.3333333333333333,0.6666666666666666,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+481,Bar,Medium,0.3333333333333333,0.0,0.0,0.0,0.6666666666666666,0.0,0.0,0.0,0.3333333333333333,0.6666666666666666,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+487,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+487,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+487,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+488,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+488,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+488,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+491,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+491,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+491,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+492,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+492,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+492,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+494,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+494,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+494,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+505,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+505,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+505,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+513,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+513,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+513,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+516,Bar,Hard,0.0,0.0,0.0,0.0,0.3333333333333333,0.0,0.0,0.0,0.0,0.3333333333333333,0.6666666666666666,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+516,Bar,Hard,0.0,0.0,0.0,0.0,0.3333333333333333,0.0,0.0,0.0,0.0,0.3333333333333333,0.6666666666666666,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+516,Bar,Hard,0.0,0.0,0.0,0.0,0.3333333333333333,0.0,0.0,0.0,0.0,0.3333333333333333,0.6666666666666666,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+517,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+517,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+517,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+526,Bar,Extra Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+526,Bar,Extra Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+526,Bar,Extra Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+527,Pie,Extra Hard,0.5,0.0,0.0,0.0,0.5,0.0,0.0,0.0,0.5,0.5,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+527,Pie,Extra Hard,0.5,0.0,0.0,0.0,0.5,0.0,0.0,0.0,0.5,0.5,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+527,Pie,Extra Hard,0.5,0.0,0.0,0.0,0.5,0.0,0.0,0.0,0.5,0.5,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+536,Scatter,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+536,Scatter,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+536,Scatter,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+539,Grouping Scatter,Easy,0.3333333333333333,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.3333333333333333,0.0,0.6666666666666666,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+539,Grouping Scatter,Easy,0.3333333333333333,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.3333333333333333,0.0,0.6666666666666666,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+539,Grouping Scatter,Easy,0.3333333333333333,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.3333333333333333,0.0,0.6666666666666666,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+540,Grouping Scatter,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+540,Grouping Scatter,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+540,Grouping Scatter,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+541,Grouping Scatter,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+541,Grouping Scatter,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+541,Grouping Scatter,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+542,Pie,Medium,0.0,0.0,0.0,0.3333333333333333,0.6666666666666666,0.0,0.0,0.0,0.0,0.6666666666666666,0.3333333333333333,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+542,Pie,Medium,0.0,0.0,0.0,0.3333333333333333,0.6666666666666666,0.0,0.0,0.0,0.0,0.6666666666666666,0.3333333333333333,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+542,Pie,Medium,0.0,0.0,0.0,0.3333333333333333,0.6666666666666666,0.0,0.0,0.0,0.0,0.6666666666666666,0.3333333333333333,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+551,Bar,Extra Hard,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.5,0.0,0.5,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+551,Bar,Extra Hard,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.5,0.0,0.5,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+551,Bar,Extra Hard,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.5,0.0,0.5,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+561,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+561,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+561,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+567,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+567,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+567,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+574,Bar,Medium,0.0,0.0,0.0,0.0,0.4,0.0,0.0,0.0,0.0,0.4,0.6,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+574,Bar,Medium,0.0,0.0,0.0,0.0,0.4,0.0,0.0,0.0,0.0,0.4,0.6,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+574,Bar,Medium,0.0,0.0,0.0,0.0,0.4,0.0,0.0,0.0,0.0,0.4,0.6,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+577,Pie,Extra Hard,0.0,0.0,0.0,0.0,0.5,0.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+577,Pie,Extra Hard,0.0,0.0,0.0,0.0,0.5,0.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+577,Pie,Extra Hard,0.0,0.0,0.0,0.0,0.5,0.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+582,Stacked Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+582,Stacked Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+582,Stacked Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+591,Grouping Line,Extra Hard,0.0,0.0,0.0,0.5,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+591,Grouping Line,Extra Hard,0.0,0.0,0.0,0.5,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+591,Grouping Line,Extra Hard,0.0,0.0,0.0,0.5,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+593,Bar,Extra Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+593,Bar,Extra Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+593,Bar,Extra Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+610,Pie,Hard,0.0,0.0,0.0,0.0,0.5,0.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+610,Pie,Hard,0.0,0.0,0.0,0.0,0.5,0.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+610,Pie,Hard,0.0,0.0,0.0,0.0,0.5,0.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+611,Line,Hard,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+611,Line,Hard,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+611,Line,Hard,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+612,Line,Hard,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+612,Line,Hard,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+612,Line,Hard,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+616,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+616,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+616,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+617,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+617,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+617,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+622,Scatter,Easy,0.0,0.0,0.0,0.0,0.5,0.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+622,Scatter,Easy,0.0,0.0,0.0,0.0,0.5,0.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+622,Scatter,Easy,0.0,0.0,0.0,0.0,0.5,0.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+628,Scatter,Extra Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+628,Scatter,Extra Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+628,Scatter,Extra Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+659,Bar,Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+659,Bar,Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+659,Bar,Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+664,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+664,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+664,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+665,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+665,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+665,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+674,Scatter,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+674,Scatter,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+674,Scatter,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+676,Bar,Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+676,Bar,Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+676,Bar,Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+688,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+688,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+688,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+691,Pie,Hard,0.3333333333333333,0.0,0.0,0.0,0.6666666666666666,0.0,0.0,0.0,0.3333333333333333,0.6666666666666666,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+691,Pie,Hard,0.3333333333333333,0.0,0.0,0.0,0.6666666666666666,0.0,0.0,0.0,0.3333333333333333,0.6666666666666666,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+691,Pie,Hard,0.3333333333333333,0.0,0.0,0.0,0.6666666666666666,0.0,0.0,0.0,0.3333333333333333,0.6666666666666666,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+693,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+693,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+693,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+697,Bar,Easy,0.0,0.0,0.0,0.0,0.5,0.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+697,Bar,Easy,0.0,0.0,0.0,0.0,0.5,0.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+697,Bar,Easy,0.0,0.0,0.0,0.0,0.5,0.0,0.0,0.0,0.0,0.5,0.5,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+699,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+699,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+699,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+707,Scatter,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+707,Scatter,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+707,Scatter,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+708,Pie,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+708,Pie,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+708,Pie,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+712,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+712,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+712,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+714,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+714,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+714,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+718,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+718,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+718,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+722,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+722,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+722,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+743,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+743,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+743,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+744,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+744,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+744,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+747,Pie,Hard,0.3333333333333333,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.3333333333333333,0.0,0.6666666666666666,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+747,Pie,Hard,0.3333333333333333,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.3333333333333333,0.0,0.6666666666666666,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+747,Pie,Hard,0.3333333333333333,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.3333333333333333,0.0,0.6666666666666666,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+770,Line,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+770,Line,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+770,Line,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+778,Grouping Line,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+778,Grouping Line,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+778,Grouping Line,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+781,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+781,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+781,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+789,Line,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+789,Line,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+789,Line,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+790,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+790,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+790,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+793,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+793,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+793,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+802,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+802,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+802,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+803,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+803,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+803,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+809,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+809,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+809,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+812,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+812,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+812,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+815,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+815,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+815,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+817,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+817,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+817,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+832,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+832,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+832,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+834,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+834,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+834,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+838,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+838,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+838,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+856,Pie,Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+856,Pie,Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+856,Pie,Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+858,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+858,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+858,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+868,Line,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+868,Line,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+868,Line,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+874,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+874,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+874,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+875,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+875,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+875,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+880,Line,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+880,Line,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+880,Line,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+883,Pie,Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+883,Pie,Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+883,Pie,Hard,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+887,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+887,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+887,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+906,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+906,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+906,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+908,Pie,Easy,0.2,0.0,0.0,0.0,0.8,0.0,0.0,0.0,0.2,0.8,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+908,Pie,Easy,0.2,0.0,0.0,0.0,0.8,0.0,0.0,0.0,0.2,0.8,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+908,Pie,Easy,0.2,0.0,0.0,0.0,0.8,0.0,0.0,0.0,0.2,0.8,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+910,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+910,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+910,Pie,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+912,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+912,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+912,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+914,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+914,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+914,Bar,Hard,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+924,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+924,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+924,Bar,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+926,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+926,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+926,Bar,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+961,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+961,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+961,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+971,Pie,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+971,Pie,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+971,Pie,Easy,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+975,Bar,Hard,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.5,0.0,0.5,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+975,Bar,Hard,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.5,0.0,0.5,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+975,Bar,Hard,0.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.5,0.0,0.5,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+990,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+990,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+990,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+994,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+994,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+994,Bar,Medium,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+998,Line,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+998,Line,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+998,Line,Medium,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+999,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+999,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+999,Pie,Easy,0.0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0,,False,Qwen/Qwen2.5-Coder-7B-Instruct,None
+1001,Bar,Medium,0.5,0.0,0.0,0.5,0.5,0.0,0.0,0.0,0.5,0.5,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+1001,Bar,Medium,0.5,0.0,0.0,0.5,0.5,0.0,0.0,0.0,0.5,0.5,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None
+1001,Bar,Medium,0.5,0.0,0.0,0.5,0.5,0.0,0.0,0.0,0.5,0.5,0.0,0.0,,True,Qwen/Qwen2.5-Coder-7B-Instruct,None

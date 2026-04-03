@@ -3,16 +3,26 @@ from func_timeout import FunctionTimedOut
 
 LLM_API_FUC = None
 
+# Check if vLLM should be used
 try:
-    from core import api
+    from core.vllm_config import USE_VLLM
+except ImportError:
+    USE_VLLM = False
 
-    LLM_API_FUC = api.safe_call_llm
-    print(f"Use func from core.api in agents.py")
-except:
+if USE_VLLM:
+    try:
+        from core import vllm_client
+        LLM_API_FUC = vllm_client.safe_call_llm
+        print(f"[WEB_AGENTS] Using vLLM client")
+    except ImportError as e:
+        print(f"[WEB_AGENTS] vLLM import failed: {e}")
+        print(f"[WEB_AGENTS] Falling back to standard LLM")
+        USE_VLLM = False
+
+if not USE_VLLM:
     from core import llm
-
     LLM_API_FUC = llm.safe_call_llm
-    print(f"Use func from core.llm in agents.py")
+    print(f"[WEB_AGENTS] Using core.llm")
 
 from core.const import *
 from typing import List

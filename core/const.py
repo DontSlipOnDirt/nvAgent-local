@@ -6,6 +6,9 @@ SYSTEM_NAME = 'System'
 PROCESSOR_NAME = "Processor"
 
 
+REVIEWER_NAME = 'Reviewer'
+MAX_REVIEW_ROUNDS = 3
+
 processor_template = """
 You are an experienced and professional database administrator. Given a database schema and a user query, your task is to analyze the query, filter the relevant schema, generate an optimized representation, and classify the query difficulty.
 
@@ -844,4 +847,39 @@ Now give your answer after thinking step by step:
 
 【Classification】
 
+"""
+
+REVIEWER_NAME = 'Reviewer'
+MAX_REVIEW_ROUNDS = 3
+
+reviewer_template = """
+You are an expert Data Visualization Quality Assurance Agent.
+Your goal is to ensure the generated chart matches the user's Natural Language Query perfectly and is free of major visual defects.
+
+User Query: "{query}"
+
+Chart Image: [Provided Image]
+
+Evaluation Checklist:
+1. **Data Match**: 
+   - Do the X and Y axes correspond *exactly* to the requested variables?
+   - Is the chart type appropriate for the data (e.g. Bar for comparisons, Line for trends)?
+   
+2. **Logic & Constraints**:
+   - if the query asks for "Top N" or "Sort by", is the data sorted/limited correctly?
+   - If the query implies a time bin (e.g., "by year"), are the ticks correct?
+   - Are there any hallucinated columns or data not requested?
+
+3. **Readability**:
+   - Are the axis labels readable (not overlapping or cut off)?
+   - Is the legend visible if multiple groups are shown?
+
+Response Format:
+PASS
+(If the chart is correct and legible)
+
+OR
+
+FAIL
+Reason: [Concise, actionable feedback. Focus on what needs to change in the data selection, sorting, or chart type.]
 """
