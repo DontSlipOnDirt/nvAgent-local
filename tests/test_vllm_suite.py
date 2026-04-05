@@ -3,11 +3,11 @@
 Comprehensive test suite for vLLM integration with NL2Vis.
 
 Usage:
-    python test_suite.py --all              # Run all tests
-    python test_suite.py --setup            # Check setup/configuration
-    python test_suite.py --server           # Test vLLM server
-    python test_suite.py --integration      # Test NL2Vis integration
-    python test_suite.py --monitor          # Monitor server continuously
+    python tests/test_vllm_suite.py --all              # Run all tests
+    python tests/test_vllm_suite.py --setup            # Check setup/configuration
+    python tests/test_vllm_suite.py --server           # Test vLLM server
+    python tests/test_vllm_suite.py --integration      # Test NL2Vis integration
+    python tests/test_vllm_suite.py --monitor          # Monitor server continuously
 """
 
 import sys
@@ -439,11 +439,11 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  python test_suite.py --all          # Run all tests
-  python test_suite.py --setup        # Check setup only
-  python test_suite.py --server       # Test server only
-  python test_suite.py --integration  # Test integration only
-  python test_suite.py --monitor      # Monitor server
+    python tests/test_vllm_suite.py --all          # Run all tests
+    python tests/test_vllm_suite.py --setup        # Check setup only
+    python tests/test_vllm_suite.py --server       # Test server only
+    python tests/test_vllm_suite.py --integration  # Test integration only
+    python tests/test_vllm_suite.py --monitor      # Monitor server
         """
     )
     

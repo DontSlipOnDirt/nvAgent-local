@@ -37,6 +37,10 @@ This repo is organized as follows:
 |  ├─const.py        # prompt templates
 |  ├─llm.py          # config llm api call and write logs
 |  ├─utils.py        # contains utils functions
+├─tests
+|  ├─test_vllm_suite.py   # vLLM setup and integration checks
+|  ├─test_visual_agent.py # reviewer/validator visual pipeline checks
+|  ├─test_chromedriver.py # selenium/chromedriver compatibility checks
 ├─web_vis # the interface for nvAgent
 |  ├─core
 |  ├─templates
@@ -46,6 +50,7 @@ This repo is organized as follows:
 |  ├─dataset.py # generate the dataset path mapping
 |  ├─evaluate.py # evaluate the score of agent
 ├─run_evaluate.py # evaluation script
+├─run_evaluate_test.py # quick subset evaluation script
 ├─README.md
 ├─requirements.txt
 ├─visEval_dataset.zip # the dataset used for evaluation
@@ -90,11 +95,11 @@ python -m core.vision_vllm_server
 
 ```bash
 # vLLM checks
-python test_vllm_suite.py --all
+python tests/test_vllm_suite.py --all
 
 # Optional browser/visual checks
-python test_chromedriver.py
-python test_visual_agent.py
+python tests/test_chromedriver.py
+python tests/test_visual_agent.py
 ```
 
 ### 5) Run evaluation
@@ -142,15 +147,15 @@ Typical values to verify:
 python -m core.vllm_server
 
 # Terminal 2
-python test_vllm_suite.py --setup
-python test_vllm_suite.py --server
-python test_vllm_suite.py --integration
+python tests/test_vllm_suite.py --setup
+python tests/test_vllm_suite.py --server
+python tests/test_vllm_suite.py --integration
 ```
 
 Or run all checks:
 
 ```bash
-python test_vllm_suite.py --all
+python tests/test_vllm_suite.py --all
 ```
 
 ### Text model troubleshooting
@@ -197,7 +202,7 @@ python -m core.vision_vllm_server
 
 # Terminal 3: vision checks
 python -m core.vision_vllm_client
-python test_visual_agent.py
+python tests/test_visual_agent.py
 ```
 
 ### Vision troubleshooting
