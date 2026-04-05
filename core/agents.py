@@ -24,7 +24,7 @@ if not USE_VLLM:
         from core import llm
         LLM_API_FUC = llm.safe_call_llm
         print(f"[AGENTS] Using core.llm (Azure OpenAI)")
-    except ImportError:
+    except ImportError as e:
         print(f"[AGENTS] core.llm import failed: {e}")
         raise ImportError("No valid LLM API function found. Please check your configuration and imports.")
 

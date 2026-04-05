@@ -32,7 +32,7 @@ if not USE_VLLM:
         LLM_API_FUC = llm.safe_call_llm
         INIT_LOG_PATH_FUNC = llm.init_log_path
         print(f"[CHAT_MANAGER] Using core.llm (Azure OpenAI)")
-    except ImportError:
+    except ImportError as e:
         print(f"[CHAT_MANAGER] core.llm import failed: {e}")
         raise ImportError("No valid LLM API function found. Please check your configuration and imports.")
 

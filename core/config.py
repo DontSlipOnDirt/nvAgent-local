@@ -60,13 +60,13 @@ VLLM_DTYPE = "auto"
 # =============================================================================
 # Vision Model Configuration
 # =============================================================================
-# Toggle for Vision Models
-# Note: Evaluation logic typically tries OpenAI first, then vLLM if enabled.
+# Toggle for Vision Models for either visual critic or inference in NL2Vis
+# toggle to use OpenAI Vision API (if False, tries to use vLLM vision model as visual critic) 
+# Both can be True, in which case vLLM vision is used for NL2Vis and OpenAI vision is used for visual critic
 USE_OPENAI_VISION = True
 USE_VISION_VLLM = False
 
 # Toggle for Reviewer Agent
-# Set to False to disable the agent loop intervention
 ENABLE_REVIEWER_AGENT = False
 
 # --- OpenAI Vision Settings ---
