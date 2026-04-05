@@ -1974,7 +1974,7 @@ wheels = [
 ]
 
 [[package]]
-name = "nl2vis"
+name = "nvAgent-local"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
