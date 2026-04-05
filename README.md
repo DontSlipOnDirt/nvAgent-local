@@ -51,69 +51,169 @@ This repo is organized as follows:
 ├─visEval_dataset.zip # the dataset used for evaluation
 ```
 
-## ⚡Start
+## ⚡Quick Start (Linux)
 
-To start with this project, there are several steps you can follow:
+This section is Linux-first because the primary runtime target is a Linux cluster.
 
-1. Set up your local environment
-
-- Create a virtual environment for the project. The recommended Python version is 3.9 or higher.
+### 1) Create environment and install dependencies
 
 ```bash
-conda create -n nvagent python=3.9
-conda env list
-conda activate nvagent
-```
-
-- Use the provided `requirements.txt` file to install the necessary dependencies.
-
-```bash
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Note:
-If there is any conflict in your packages, try to reinstall them again individually. 
+### 2) Configure runtime settings
+
+- Main runtime config: `core/config.py`
+- vLLM-specific config: `core/vllm_config.py`
+- Vision vLLM config: `core/vision_vllm_config.py`
+
+Important values to check before running:
+
+- `DATASET_FOLDER` (defaults to `visEval_dataset`)
+- `USE_VLLM` / `USE_VISION_VLLM`
+- model names and GPU memory utilization
+- API credentials when using OpenAI/Azure-backed vision
+
+### 3) Start model servers
 
 ```bash
-pip uninstall package_name
-pip install package_name
+# Terminal 1: text model server
+python -m core.vllm_server
+
+# Terminal 2: vision model server (only if using local vision model)
+python -m core.vision_vllm_server
 ```
 
-2. Config your API, and file paths.
+### 4) Validate setup
 
-- Edit your api key, api base, and api version in `api_config.py`. (We use AzureOpenAI API for nvAgent, and you can replace it with OpenAI)
-- In `chat_manager.py`, replace `folder = "E:/visEval_dataset"` with your own dataset path.
+```bash
+# vLLM checks
+python test_vllm_suite.py --all
 
-3. Run `llm.py` to test your api config, and run `chat_manager.py` to test nvAgent. (you can find test examples in `visEval.json` in `visEval_dataset`)
-
-## 🎰Evaluation
-
-After you config nvAgent correctly, you can run `run_evaluate.py` to acquire the final scores. But there are also several configs you need to set before evaluation.
-
-1. Vision model:
-
-We implement the evaluation with a vision language model such as GPT-4o-mini for MLLM-as-a-Judge. Due to the rate limit of Azure API, we choose Openai API for the vision model instead:
-
-```python
-vision_model = ChatOpenAI(
-        model_name="gpt-4o-mini",
-        ...
-        base_url="your api base here",
-        api_key="your api key here",
-    )
+# Optional browser/visual checks
+python test_chromedriver.py
+python test_visual_agent.py
 ```
 
-Note:
-Here, we use Langchain to implement the interactions.
+### 5) Run evaluation
 
-2. Others:
+```bash
+# Quick subset test
+python run_evaluate_test.py 50
 
-```python
-folder = "E:/visEval_dataset" # your dataset path here
-library = 'matplotlib' # choose matplotlib or seaborn for visualization
-webdriver = Path("C:\Program Files\Google\Chrome\Application\chromedriver.exe") # your chromedriver path here
-log_folder = Path("evaluate_logs") # set your evaluation results path
-dataset = Dataset(Path(folder), "all") # choose all,single,multiple for different dataset setting
-agent = ChatManager(data_path=folder, log_path="./test_logs.txt") # set the prompt and response logs path
-evaluator = Evaluator(webdriver_path=webdriver, vision_model=vision_model)
+# Full evaluation
+python run_evaluate.py
+```
+
+## 🎰Evaluation Notes
+
+- Results are written under `results/`.
+- Web app usage is documented in `web_vis/README.md`.
+
+## 🧠Text Model Setup (vLLM)
+
+Use this section when running local text generation with vLLM.
+
+### Prerequisites
+
+- Python 3.9+
+- NVIDIA GPU + CUDA runtime
+- Linux environment
+
+### Configure text backend
+
+Update values in:
+
+- `core/config.py`
+
+Typical values to verify:
+
+- `USE_VLLM = True`
+- `VLLM_MODEL_NAME`
+- `VLLM_GPU_MEMORY_UTILIZATION`
+- `VLLM_QUANTIZATION`
+
+### Start and validate text server
+
+```bash
+# Terminal 1
+python -m core.vllm_server
+
+# Terminal 2
+python test_vllm_suite.py --setup
+python test_vllm_suite.py --server
+python test_vllm_suite.py --integration
+```
+
+Or run all checks:
+
+```bash
+python test_vllm_suite.py --all
+```
+
+### Text model troubleshooting
+
+Check server endpoint:
+
+```bash
+curl http://localhost:8000/v1/models
+```
+
+If memory is tight, reduce `VLLM_GPU_MEMORY_UTILIZATION` and/or enable quantization.
+
+## 👁️Vision Model Setup
+
+Use this section when scoring chart readability/quality with a vision model.
+
+### Vision modes
+
+- OpenAI vision model configured in `core/config.py`
+- Local vLLM vision model served via `core.vision_vllm_server`
+
+### Configure vision backend
+
+Update values in:
+
+- `core/config.py`
+- `core/vision_vllm_config.py`
+
+Typical values to verify:
+
+- `USE_OPENAI_VISION`
+- `USE_VISION_VLLM`
+- `OPENAI_VISION_MODEL_NAME`
+- `VISION_VLLM_MODEL_NAME`
+
+### Start and validate vision path
+
+```bash
+# Terminal 1: text server
+python -m core.vllm_server
+
+# Terminal 2: vision server (required only if USE_VISION_VLLM=True)
+python -m core.vision_vllm_server
+
+# Terminal 3: vision checks
+python -m core.vision_vllm_client
+python test_visual_agent.py
+```
+
+### Vision troubleshooting
+
+Check vision endpoint:
+
+```bash
+curl http://localhost:8001/v1/models
+```
+
+If vision is not being used, verify `USE_VISION_VLLM` and `USE_OPENAI_VISION` in `core/config.py` and confirm the configured host/port values.
+
+## Windows Notes (Optional)
+
+If you run locally on Windows, activate the virtual environment with:
+
+```powershell
+.venv\Scripts\Activate.ps1
 ```
