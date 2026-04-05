@@ -3,7 +3,7 @@ try:
     from core.const import REVIEWER_NAME, MAX_REVIEW_ROUNDS
     print("Constants loaded.")
     
-    from core.vision_vllm_config import VISION_VLLM_MODEL_NAME
+    from core.config import VISION_VLLM_MODEL_NAME
     print(f"Config loaded: {VISION_VLLM_MODEL_NAME}")
     
     from core.agents import Reviewer, Validator, Processor, Composer

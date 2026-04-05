@@ -10,7 +10,7 @@ LLM_API_FUC = None
 
 # Check if vLLM should be used
 try:
-    from core.vllm_config import USE_VLLM
+    from core.config import USE_VLLM
 except ImportError:
     USE_VLLM = False
 

@@ -7,8 +7,9 @@ import subprocess
 import sys
 import os
 
+# Add parent directory to path for imports because this is a standalone script
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from core.vllm_config import (
+from core.config import (
     VLLM_MODEL_NAME,
     VLLM_HOST,
     VLLM_PORT,

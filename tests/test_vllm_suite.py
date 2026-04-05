@@ -3,11 +3,11 @@
 Comprehensive test suite for vLLM integration with NL2Vis.
 
 Usage:
-    python test_suite.py --all              # Run all tests
-    python test_suite.py --setup            # Check setup/configuration
-    python test_suite.py --server           # Test vLLM server
-    python test_suite.py --integration      # Test NL2Vis integration
-    python test_suite.py --monitor          # Monitor server continuously
+    python tests/test_vllm_suite.py --all              # Run all tests
+    python tests/test_vllm_suite.py --setup            # Check setup/configuration
+    python tests/test_vllm_suite.py --server           # Test vLLM server
+    python tests/test_vllm_suite.py --integration      # Test NL2Vis integration
+    python tests/test_vllm_suite.py --monitor          # Monitor server continuously
 """
 
 import sys
@@ -38,7 +38,7 @@ def check_imports():
         "torch": "PyTorch",
         "ray": "Ray (required by vLLM)",
         "requests": "HTTP library",
-        "core.vllm_config": "vLLM configuration",
+        "core.config": "central configuration",
         "core.vllm_client": "vLLM client wrapper"
     }
     
@@ -60,7 +60,7 @@ def check_config():
     print_header("Checking vLLM Configuration")
     
     try:
-        from core.vllm_config import (
+        from core.config import (
             USE_VLLM,
             VLLM_MODEL_NAME,
             VLLM_HOST,
@@ -81,7 +81,7 @@ def check_config():
         
         if not USE_VLLM:
             print("\n⚠️  vLLM is DISABLED - System will use Azure OpenAI API")
-            print("   Set USE_VLLM=True in core/vllm_config.py to enable")
+            print("   Set USE_VLLM=True in core/config.py to enable")
         else:
             print("\n✅ vLLM is ENABLED")
         
@@ -139,7 +139,7 @@ def check_server():
     
     try:
         import requests
-        from core.vllm_config import VLLM_HOST, VLLM_PORT
+        from core.config import VLLM_HOST, VLLM_PORT
         
         url = f"http://{VLLM_HOST}:{VLLM_PORT}/v1/models"
         
@@ -180,7 +180,7 @@ def test_server_basic():
     
     try:
         from openai import OpenAI
-        from core.vllm_config import VLLM_MODEL_NAME, VLLM_HOST, VLLM_PORT
+        from core.config import VLLM_MODEL_NAME, VLLM_HOST, VLLM_PORT
         
         client = OpenAI(
             base_url=f"http://{VLLM_HOST}:{VLLM_PORT}/v1",
@@ -220,7 +220,7 @@ def test_server_nl2vis():
     
     try:
         from openai import OpenAI
-        from core.vllm_config import VLLM_MODEL_NAME, VLLM_HOST, VLLM_PORT
+        from core.config import VLLM_MODEL_NAME, VLLM_HOST, VLLM_PORT
         
         client = OpenAI(
             base_url=f"http://{VLLM_HOST}:{VLLM_PORT}/v1",
@@ -264,7 +264,7 @@ def test_vllm_client():
     print_header("Testing vLLM Client Integration")
     
     try:
-        from core.vllm_config import USE_VLLM
+        from core.config import USE_VLLM
         
         if not USE_VLLM:
             print("⚠️  vLLM is disabled, skipping client test")
@@ -284,7 +284,7 @@ def test_vllm_client():
     except Exception as e:
         print(f"❌ Client test failed: {e}")
         print("\nMake sure:")
-        print("  1. USE_VLLM=True in core/vllm_config.py")
+        print("  1. USE_VLLM=True in core/config.py")
         print("  2. vLLM server is running")
         return False
 
@@ -294,7 +294,7 @@ def test_agent_integration():
     print_header("Testing Agent Integration")
     
     try:
-        from core.vllm_config import USE_VLLM
+        from core.config import USE_VLLM
         
         if not USE_VLLM:
             print("⚠️  vLLM is disabled, skipping agent test")
@@ -340,7 +340,7 @@ def monitor_server(interval=30):
     
     try:
         import requests
-        from core.vllm_config import VLLM_HOST, VLLM_PORT
+        from core.config import VLLM_HOST, VLLM_PORT
         
         while True:
             timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -424,7 +424,7 @@ def run_all_tests():
     
     if skipped:
         print(f"\n⚠️  {len(skipped)} test(s) skipped: {', '.join(skipped)}")
-        print("   Enable vLLM in core/vllm_config.py to run all tests")
+        print("   Enable vLLM in core/config.py to run all tests")
     
     print("=" * 60 + "\n")
 
@@ -439,11 +439,11 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  python test_suite.py --all          # Run all tests
-  python test_suite.py --setup        # Check setup only
-  python test_suite.py --server       # Test server only
-  python test_suite.py --integration  # Test integration only
-  python test_suite.py --monitor      # Monitor server
+    python tests/test_vllm_suite.py --all          # Run all tests
+    python tests/test_vllm_suite.py --setup        # Check setup only
+    python tests/test_vllm_suite.py --server       # Test server only
+    python tests/test_vllm_suite.py --integration  # Test integration only
+    python tests/test_vllm_suite.py --monitor      # Monitor server
         """
     )
     

@@ -5,7 +5,7 @@ LLM_API_FUC = None
 
 # Check if vLLM should be used
 try:
-    from core.vllm_config import USE_VLLM
+    from core.config import USE_VLLM
 except ImportError:
     USE_VLLM = False
 
@@ -21,20 +21,19 @@ if USE_VLLM:
 
 if not USE_VLLM:
     try:
-        from core import api
-        LLM_API_FUC = api.safe_call_llm
-        print(f"[AGENTS] Using core.api (Azure OpenAI)")
-    except ImportError:
         from core import llm
         LLM_API_FUC = llm.safe_call_llm
         print(f"[AGENTS] Using core.llm (Azure OpenAI)")
+    except ImportError as e:
+        print(f"[AGENTS] core.llm import failed: {e}")
+        raise ImportError("No valid LLM API function found. Please check your configuration and imports.")
 
 from core.const import *
 from typing import List
 import base64
 
 try:
-    from core.vision_vllm_config import ENABLE_REVIEWER_AGENT
+    from core.config import ENABLE_REVIEWER_AGENT
 except ImportError:
     ENABLE_REVIEWER_AGENT = False
 
@@ -1149,6 +1148,9 @@ print("y_data:", df['{y_col}'].tolist())
         reply = LLM_API_FUC(prompt, **world_info)
         new_code = parse_code_from_string(reply)
         return new_code
+
+    # The following functions are designed to analyze the VQL and NL query for potential semantic mismatches 
+    # that could lead to higher data_check and scales_and_ticks_check fails.
 
     # def _extract_vql_info(self, vql: str):
     #     """Parse the key VQL parts used by semantic consistency checks."""
