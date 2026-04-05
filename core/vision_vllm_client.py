@@ -11,7 +11,7 @@ from langchain_core.language_models.chat_models import BaseChatModel
 from langchain_core.messages import BaseMessage, HumanMessage, SystemMessage, AIMessage
 from langchain_core.outputs import ChatResult, ChatGeneration
 
-from core.vision_vllm_config import (
+from core.config import (
     VISION_VLLM_BASE_URL,
     VISION_VLLM_MODEL_NAME,
     VISION_VLLM_MAX_TOKENS,

@@ -7,7 +7,7 @@ import json
 import time
 from typing import Optional, Tuple
 from openai import OpenAI
-from core.vllm_config import (
+from core.config import (
     VLLM_BASE_URL,
     VLLM_MODEL_NAME,
     VLLM_MAX_TOKENS,

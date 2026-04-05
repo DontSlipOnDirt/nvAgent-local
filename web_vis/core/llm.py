@@ -1,8 +1,8 @@
 import sys
 import json
 import time
-# from api_config import *
-from core.api_config import *
+import os
+from core.config import MODEL_NAME
 from openai import AzureOpenAI
 MAX_TRY = 5
 

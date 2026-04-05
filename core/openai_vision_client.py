@@ -8,7 +8,7 @@ from datetime import datetime
 from typing import Any, Optional, List
 from langchain_openai import ChatOpenAI
 from langchain_core.messages import BaseMessage
-from core.openai_vision_config import (
+from core.config import (
     OPENAI_API_KEY,
     OPENAI_VISION_MODEL_NAME,
     OPENAI_VISION_TEMPERATURE,

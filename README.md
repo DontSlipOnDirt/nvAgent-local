@@ -32,7 +32,7 @@ This repo is organized as follows:
 ```txt
 ├─core
 |  ├─agents.py       # define three agents class
-|  ├─api_config.py   # config API key and base
+|  ├─config.py       # centralized runtime/model configuration
 |  ├─chat_manager.py # manage the communication between agents
 |  ├─const.py        # prompt templates
 |  ├─llm.py          # config llm api call and write logs
@@ -71,8 +71,6 @@ pip install -r requirements.txt
 ### 2) Configure runtime settings
 
 - Main runtime config: `core/config.py`
-- vLLM-specific config: `core/vllm_config.py`
-- Vision vLLM config: `core/vision_vllm_config.py`
 
 Important values to check before running:
 
@@ -182,7 +180,8 @@ Use this section when scoring chart readability/quality with a vision model.
 Update values in:
 
 - `core/config.py`
-- `core/vision_vllm_config.py`
+
+All runtime settings are centralized in `core/config.py`.
 
 Typical values to verify:
 
